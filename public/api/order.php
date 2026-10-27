@@ -137,9 +137,8 @@ if ($fulfillment === 'delivery') {
     $lines[] = "🏠 Адреса доставки: {$address}";
 }
 if (!$isQrOrder) {
-    if (in_array($fulfillment, ['pickup', 'delivery'], true)) {
-        $lines[] = '💳 Оплата: ПЕРЕДПЛАТА після підтвердження замовлення';
-    }
+    if ($fulfillment === 'pickup') $lines[] = '💳 Оплата: ПЕРЕДПЛАТА 50% після підтвердження замовлення';
+    if ($fulfillment === 'delivery') $lines[] = '💳 Оплата: ПЕРЕДПЛАТА після підтвердження замовлення';
     $lines[] = "📅 Дата: {$orderAt->format('d.m.Y')}";
     $lines[] = '⏰ Час: ' . slot_label($site,$time);
 }

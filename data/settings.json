@@ -14,7 +14,7 @@
         "lead_minutes": 60
     },
     "delivery": {
-        "minimum_minor": null,
+        "minimum_minor": 80000,
         "fee_minor": null,
         "free_from_minor": null
     },

@@ -241,9 +241,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const delivery = fulfillment === 'delivery', addressField = document.querySelector('[data-address-field]'), addressInput = field('address');
     const fulfillmentNote = document.querySelector('[data-fulfillment-note]');
     const fulfillmentNotes = {
-      pickup: 'Самовивіз оплачується за передплатою. Заберіть замовлення у Sushi Relax за адресою: м. Гадяч, вул. Соборна, 13а. На наступному кроці оберіть дату та час готовності.',
+      pickup: 'Для самовивозу діє передплата 50%. Заберіть замовлення у Sushi Relax за адресою: м. Гадяч, вул. Соборна, 13а. На наступному кроці оберіть дату та час готовності.',
       dinein: checkoutSource === 'qr' ? 'Ви оформлюєте замовлення через QR-меню в закладі. Перевірте склад кошика та вкажіть контактні дані - замовлення одразу надійде адміністратору.' : 'Оберіть дату, час і кількість персон - ми підготуємо замовлення до вашого приходу. Можливість розміщення у закладі підтвердить адміністратор.',
-      delivery: 'Для доставки діє передплата. На наступному кроці вкажіть адресу, дату та зручний час. Після підтвердження замовлення адміністратор надасть реквізити, суму до сплати та повідомить орієнтовний час доставки.'
+      delivery: 'Мінімальна сума замовлення для доставки - 800 грн. Для доставки діє передплата. На наступному кроці вкажіть адресу, дату та зручний час. Після підтвердження замовлення адміністратор надасть реквізити, суму до сплати та повідомить орієнтовний час доставки.'
     };
     if (fulfillmentNote) fulfillmentNote.textContent = fulfillmentNotes[fulfillment] || '';
     addressField.hidden = !delivery; addressInput.required = delivery;
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
       : [['Отримання', fulfillmentLabel(fulfillment)], ['Ім’я', nameInput.value.trim()], ['Телефон', phoneInput.value.trim()], ['Кількість персон', personsInput.value]];
     if (!compactQrReview) rows.push(['Дата', dateLabel(dateInput.value)], ['Час', intervalLabel(timeInput.value)]);
     if (fulfillment === 'delivery') rows.splice(2, 0, ['Адреса', field('address').value.trim()]);
-    if (!compactQrReview && fulfillment !== 'dinein') rows.push(['Оплата', 'Передплата після підтвердження замовлення']);
+    if (!compactQrReview && fulfillment !== 'dinein') rows.push(['Оплата', fulfillment === 'pickup' ? 'Передплата 50% після підтвердження замовлення' : 'Передплата після підтвердження замовлення']);
     if (field('comment').value.trim()) rows.push(['Коментар', field('comment').value.trim()]);
     if (form.querySelector('[name="fulfillment"]:checked').value === 'delivery' && form.dataset.deliveryEnabled !== '1') rows.push(['Вартість доставки', 'Уточнить адміністратор']);
     rows.push(['До сплати', money((currentQuote || localQuote()).total_minor)]);
@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!compactQrDraft) lines.push(`Дата і час: ${dateLabel(dateInput.value)}, ${intervalLabel(timeInput.value)}`);
     lines.push(`Ім’я: ${nameInput.value.trim()}`, `Телефон: ${phoneInput.value.trim()}`, `Кількість персон: ${personsInput.value}`);
     if (fulfillment === 'delivery') lines.push(`Адреса: ${field('address').value.trim()}`);
-    if (!compactQrDraft && fulfillment !== 'dinein') lines.push('Оплата: передплата після підтвердження замовлення');
+    if (!compactQrDraft && fulfillment !== 'dinein') lines.push(fulfillment === 'pickup' ? 'Оплата: передплата 50% після підтвердження замовлення' : 'Оплата: передплата після підтвердження замовлення');
     lines.push('', 'СКЛАД:');
     cart.forEach(row => { lines.push(`• ${row.quantity} × ${row.name} - ${money(row.price_minor * row.quantity)}`); if (row.options?.length) lines.push(`  Додатково: ${row.options.map(option => option.name).join(', ')}`); });
     if (promoInput.value.trim()) lines.push(`Промокод: ${promoInput.value.trim()} (перевірити)`);

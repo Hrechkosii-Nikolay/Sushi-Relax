@@ -402,7 +402,7 @@ function calculate_order_quote(array $items, array $catalogData, array $site, st
     }
     $afterDiscount=max(0,$subtotal-$discount);$gift=null;$giftRule=$site['gift']??[];$basis=($giftRule['threshold_basis']??'after_discount')==='before_discount'?$subtotal:$afterDiscount;
     if(date_rule_active($giftRule)&&is_int($giftRule['threshold_minor']??null)&&$basis>=$giftRule['threshold_minor']){$giftProduct=$products[$giftRule['product_id']??'']??null;if($giftProduct){$gift=['id'=>$giftProduct['id'],'name'=>$giftProduct['name'],'quantity'=>1,'line_minor'=>0,'weight_g'=>$giftProduct['weight_g']??null];if(is_int($giftProduct['weight_g']??null))$totalWeight+=$giftProduct['weight_g'];else$allWeightsKnown=false;}}
-    $minimum=$site['delivery']['minimum_minor']??null;if($fulfillment==='delivery'&&is_int($minimum)&&$afterDiscount<$minimum)throw new InvalidArgumentException('Сума замовлення менша за мінімальну для доставки.');
+    $minimum=$site['delivery']['minimum_minor']??null;if($fulfillment==='delivery'&&is_int($minimum)&&$afterDiscount<$minimum)throw new InvalidArgumentException('Мінімальна сума замовлення для доставки - '.money($minimum).'.');
     $deliveryFee=0;if($fulfillment==='delivery'&&is_int($site['delivery']['fee_minor']??null)){$freeFrom=$site['delivery']['free_from_minor']??null;if(!is_int($freeFrom)||$afterDiscount<$freeFrom)$deliveryFee=$site['delivery']['fee_minor'];}
     return ['items'=>$verified,'subtotal_minor'=>$subtotal,'discount_minor'=>$discount,'promo_code'=>$appliedPromo,'gift'=>$gift,'delivery_minor'=>$deliveryFee,'total_minor'=>$afterDiscount+$deliveryFee,'weight_g'=>$allWeightsKnown?$totalWeight:null];
 }
