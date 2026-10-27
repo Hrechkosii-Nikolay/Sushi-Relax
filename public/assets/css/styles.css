@@ -24,7 +24,7 @@
 @media(max-width:620px){.contact-actions-menu{position:fixed;top:auto;right:16px;bottom:16px;left:16px;min-width:0}.info-card--wide{grid-row:auto}}
 [data-order-copy]{white-space:pre-wrap;color:#d4ccc3;line-height:1.75}
 .delivery-title{display:grid;row-gap:.14em}
-.product-heading h3,.drink-menu-copy h3{text-transform:uppercase}
+.product-heading h3,.drink-menu-copy h3{text-transform:uppercase}.product-heading h3{letter-spacing:.035em}
 .product-meta>div{display:grid;grid-template-columns:60px minmax(0,1fr);align-items:start;gap:8px}
 @media(max-width:900px){.site-header>.cart-button{grid-column:2;grid-row:1;justify-self:end}.site-header>.nav-toggle{grid-column:3;grid-row:1}}
 .choice input:disabled+span{opacity:.45;cursor:not-allowed}
