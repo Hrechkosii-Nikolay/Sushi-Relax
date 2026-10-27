@@ -1,0 +1,1059 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0908">
+  <title>Sushi Relax - суші для вашого вечора</title>
+  <meta name="description" content="Меню Sushi Relax: роли та сети. Доставка, самовивіз або замовлення до столу на вибраний час.">
+      <meta property="og:title" content="Sushi Relax - суші для вашого вечора">
+  <meta property="og:description" content="Меню Sushi Relax: роли та сети. Доставка, самовивіз або замовлення до столу на вибраний час.">
+  <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+    <link rel="icon" href="assets/img/sushi-relax-logo.webp" type="image/webp">
+  <link rel="apple-touch-icon" href="assets/img/sushi-relax-logo.webp">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261027-15">
+</head>
+<body class="">
+<a class="skip-link" href="#content">До вмісту</a>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Sushi Relax - на головну">
+    <img class="brand-logo" src="assets/img/sushi-relax-logo.webp" alt="" width="50" height="50">
+    <span>Sushi <em>Relax</em></span>
+  </a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Відкрити меню"><span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span><span class="sr-only">Меню</span></button>
+  <div class="nav-backdrop" data-nav-close hidden></div>
+  <nav id="site-nav" class="site-nav" aria-label="Основна навігація">
+    <button class="nav-close" type="button" data-nav-close aria-label="Закрити меню">×</button>
+    <a href="/#menu">Меню</a><a href="/reservation.html">Бронювання</a><a href="/delivery.html">Доставка та оплата</a><a href="/about.html">Про нас</a><a href="/contacts.html">Контакти</a><a href="/qr-menu/">QR-меню</a>
+  </nav>
+      <button class="cart-button" type="button" data-cart-open aria-controls="cart-sheet" aria-label="Відкрити кошик">
+      <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.1 9.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L20 7H6"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg>
+      <span class="cart-button-label">Кошик</span><span data-cart-count aria-live="polite" hidden>0</span>
+    </button>
+  </header>
+<main id="content">
+  <section class="hero" aria-labelledby="hero-title">
+    <header class="hero-copy">
+      <p class="eyebrow">Суші · роли · сети</p>
+      <h1 id="hero-title">Смак, що<br><em>зупиняє час.</em></h1>
+      <p class="hero-lead">Свіжі роли, яскраві поєднання та задоволення в кожному шматочку.</p>
+      <div class="hero-actions"><a class="button" href="#menu">Замовити</a><a class="button button--reservation" href="/reservation.html"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg><span>Забронювати стіл</span></a></div>
+      <p class="service-line" data-order-status><span class="status-dot is-open"></span><strong>Відчинено</strong><span>м. Гадяч, вул. Соборна, 13а</span></p>
+    </header>
+    <figure class="hero-visual"><img src="assets/img/hero-interior-3176.webp" alt="Інтер’єр Sushi Relax" width="1200" height="1600" fetchpriority="high" decoding="async"></figure>
+  </section>
+
+  <section class="ticker" aria-label="Переваги"><span>Свіже приготування</span><i>✦</i><span>Доставка · самовивіз · у закладі</span><i>✦</i><span>Замовлення онлайн</span></section>
+
+  <section class="promotions" aria-labelledby="promotions-title" data-banner-section hidden><header class="section-heading"><hgroup><p class="eyebrow">Спеціальні пропозиції</p><h2 id="promotions-title">Акції</h2></hgroup></header><div class="banner-grid" data-banner-grid></div></section>
+
+  <section class="promotions promo-products" aria-labelledby="promo-products-title" data-promo-products-section hidden><header class="section-heading"><hgroup><p class="eyebrow">Зараз вигідніше</p><h2 id="promo-products-title">Акційне меню</h2></hgroup></header><div class="product-grid" data-promo-products-grid></div></section>
+
+  <section class="menu-section" id="menu" aria-labelledby="menu-title">
+    <header class="section-heading"><hgroup><p class="eyebrow">Оберіть своє</p><h2 id="menu-title">Меню</h2></hgroup></header>
+    <nav class="qr-category-nav" aria-label="Категорії меню"><ul class="qr-category-nav-list">
+  <li><a href="#category-sets" data-category-link aria-current="true">Сети</a></li><li><a href="#category-philadelphia" data-category-link>Філадельфія</a></li><li><a href="#category-california" data-category-link>Каліфорнія</a></li><li><a href="#category-dragons" data-category-link>Дракони</a></li><li><a href="#category-baked" data-category-link>Запечені роли</a></li><li><a href="#category-rolls" data-category-link>Роли та макі</a></li><li><a href="#category-hot-dishes" data-category-link>Гарячі страви</a></li><li><a href="#category-udon" data-category-link>Удон</a></li><li><a href="#category-funchose" data-category-link>Фунчоза</a></li><li><a href="#category-syrnyky" data-category-link>Сирники</a></li><li><a href="#category-sweet-rolls" data-category-link>Солодкі роли</a></li><li><a href="#category-sweet-sets" data-category-link>Солодкі сети</a></li><li><a href="#category-cocktails" data-category-link>Коктейлі</a></li><li><a href="#category-milkshakes" data-category-link>Молочні коктейлі</a></li><li><a href="#category-coffee" data-category-link>Кава</a></li><li><a href="#category-hot-drinks" data-category-link>Гарячі напої</a></li></ul></nav>
+    <search class="menu-search"><label class="search"><span class="sr-only">Пошук страв</span><input type="search" placeholder="Знайти рол або сет…" data-menu-search></label></search>
+        <div data-menu-catalog><section class="menu-group" id="category-sets" aria-labelledby="category-title-sets" data-menu-group>
+  <button class="category-trigger" type="button" aria-expanded="true" aria-controls="category-panel-sets">
+    <span id="category-title-sets"><small>01</small>Сети</span><span aria-hidden="true">＋</span>
+  </button>
+  <div class="category-panel" id="category-panel-sets">
+          <div class="product-grid"><article class="product-card" id="product-set-weekend" data-product data-product-id="set-weekend" data-product-url="/products/set-weekend.html" data-search="сет «weekend» філадельфія класик; каліфорнія з вугром; рол з тунцем; фелікс рол зі смаженим лососем; каліфорнія з тунцем">
+  <a class="product-media" href="/products/set-weekend.html" aria-label="Переглянути Сет «Weekend»"><img src="assets/img/set-weekend-enhanced.webp" alt="Сет «Weekend»" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/set-weekend.html">Сет «Weekend»</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Філадельфія класик</span><span>Каліфорнія з вугром</span><span>Рол з тунцем</span><span>Фелікс рол зі смаженим лососем</span><span>Каліфорнія з тунцем</span></span></dd></div>      <div><dt>Вага</dt><dd>1200 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>1 000 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Сет «Weekend»"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;set-weekend&quot;,&quot;name&quot;:&quot;Сет «Weekend»&quot;,&quot;price_minor&quot;:100000,&quot;weight_g&quot;:1200,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-set-philadelphia" data-product data-product-id="set-philadelphia" data-product-url="/products/set-philadelphia.html" data-search="сет «філадельфія» філадельфія класик; каліфорнія з вугром; рол з тунцем">
+  <a class="product-media" href="/products/set-philadelphia.html" aria-label="Переглянути Сет «Філадельфія»"><img src="assets/img/set-philadelphia-enhanced.webp" alt="Сет «Філадельфія»" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/set-philadelphia.html">Сет «Філадельфія»</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Філадельфія класик</span><span>Каліфорнія з вугром</span><span>Рол з тунцем</span></span></dd></div>      <div><dt>Вага</dt><dd>750 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>700 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Сет «Філадельфія»"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;set-philadelphia&quot;,&quot;name&quot;:&quot;Сет «Філадельфія»&quot;,&quot;price_minor&quot;:70000,&quot;weight_g&quot;:750,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-set-elite-relax" data-product data-product-id="set-elite-relax" data-product-url="/products/set-elite-relax.html" data-search="сет «elite relax» філадельфія люкс; філадельфія з манго у вугрі; фелікс рол з тунцем; фелікс рол зі смаженим лососем; філадельфія cheese; червоний дракон">
+  <a class="product-media" href="/products/set-elite-relax.html" aria-label="Переглянути Сет «Elite Relax»"><img src="assets/img/set-elite-relax-enhanced.webp" alt="Сет «Elite Relax»" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/set-elite-relax.html">Сет «Elite Relax»</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Філадельфія люкс</span><span>Філадельфія з манго у вугрі</span><span>Фелікс рол з тунцем</span><span>Фелікс рол зі смаженим лососем</span><span>Філадельфія Cheese</span><span>Червоний дракон</span></span></dd></div>      <div><dt>Вага</dt><dd>1500 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>1 450 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Сет «Elite Relax»"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;set-elite-relax&quot;,&quot;name&quot;:&quot;Сет «Elite Relax»&quot;,&quot;price_minor&quot;:145000,&quot;weight_g&quot;:1500,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-set-family" data-product data-product-id="set-family" data-product-url="/products/set-family.html" data-search="сет «family» філадельфія класик; каліфорнія з вугром; рол з тунцем; фелікс рол з куркою; футо сурімі">
+  <a class="product-media" href="/products/set-family.html" aria-label="Переглянути Сет «Family»"><img src="assets/img/set-family-enhanced.webp" alt="Сет «Family»" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/set-family.html">Сет «Family»</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Філадельфія класик</span><span>Каліфорнія з вугром</span><span>Рол з тунцем</span><span>Фелікс рол з куркою</span><span>Футо сурімі</span></span></dd></div>      <div><dt>Вага</dt><dd>1150 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>900 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Сет «Family»"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;set-family&quot;,&quot;name&quot;:&quot;Сет «Family»&quot;,&quot;price_minor&quot;:90000,&quot;weight_g&quot;:1150,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-set-fire" data-product data-product-id="set-fire" data-product-url="/products/set-fire.html" data-search="сет «пожежа» рол запечений з копченим лососем; рол запечений з креветкою; рол запечений з куркою">
+  <a class="product-media" href="/products/set-fire.html" aria-label="Переглянути Сет «Пожежа»"><img src="assets/img/set-fire-enhanced.webp" alt="Сет «Пожежа»" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/set-fire.html">Сет «Пожежа»</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Рол запечений з копченим лососем</span><span>Рол запечений з креветкою</span><span>Рол запечений з куркою</span></span></dd></div>      <div><dt>Вага</dt><dd>895 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>850 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Сет «Пожежа»"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;set-fire&quot;,&quot;name&quot;:&quot;Сет «Пожежа»&quot;,&quot;price_minor&quot;:85000,&quot;weight_g&quot;:895,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-set-chef" data-product data-product-id="set-chef" data-product-url="/products/set-chef.html" data-search="сет «від шефа» філадельфія класик; каліфорнія з вугром; рол з тунцем; фелікс рол з куркою; футо сурімі; фелікс рол зі смаженим лососем; каліфорнія з тунцем">
+  <a class="product-media" href="/products/set-chef.html" aria-label="Переглянути Сет «Від шефа»"><img src="assets/img/set-chef-enhanced.webp" alt="Сет «Від шефа»" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/set-chef.html">Сет «Від шефа»</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Філадельфія класик</span><span>Каліфорнія з вугром</span><span>Рол з тунцем</span><span>Фелікс рол з куркою</span><span>Футо сурімі</span><span>Фелікс рол зі смаженим лососем</span><span>Каліфорнія з тунцем</span></span></dd></div>      <div><dt>Вага</dt><dd>1650 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>1 250 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Сет «Від шефа»"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;set-chef&quot;,&quot;name&quot;:&quot;Сет «Від шефа»&quot;,&quot;price_minor&quot;:125000,&quot;weight_g&quot;:1650,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-set-vip-relax" data-product data-product-id="set-vip-relax" data-product-url="/products/set-vip-relax.html" data-search="сет «vip relax» філадельфія люкс; філадельфія з манго у вугрі; фелікс рол з тунцем">
+  <a class="product-media" href="/products/set-vip-relax.html" aria-label="Переглянути Сет «Vip Relax»"><img src="assets/img/set-vip-relax-enhanced.webp" alt="Сет «Vip Relax»" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/set-vip-relax.html">Сет «Vip Relax»</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Філадельфія люкс</span><span>Філадельфія з манго у вугрі</span><span>Фелікс рол з тунцем</span></span></dd></div>      <div><dt>Вага</dt><dd>750 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>850 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Сет «Vip Relax»"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;set-vip-relax&quot;,&quot;name&quot;:&quot;Сет «Vip Relax»&quot;,&quot;price_minor&quot;:85000,&quot;weight_g&quot;:750,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+</div>
+      </div>
+</section>
+<section class="menu-group" id="category-philadelphia" aria-labelledby="category-title-philadelphia" data-menu-group>
+  <button class="category-trigger" type="button" aria-expanded="true" aria-controls="category-panel-philadelphia">
+    <span id="category-title-philadelphia"><small>02</small>Філадельфія</span><span aria-hidden="true">＋</span>
+  </button>
+  <div class="category-panel" id="category-panel-philadelphia">
+          <div class="product-grid"><article class="product-card" id="product-philadelphia-lux" data-product data-product-id="philadelphia-lux" data-product-url="/products/philadelphia-lux.html" data-search="філадельфія люкс вершковий сир, вугор, огірок, салат айсберг, лосось">
+  <a class="product-media" href="/products/philadelphia-lux.html" aria-label="Переглянути Філадельфія люкс"><img src="assets/img/philadelphia-lux-enhanced.webp" alt="Філадельфія люкс" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/philadelphia-lux.html">Філадельфія люкс</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Вугор</span><span>Огірок</span><span>Салат айсберг</span><span>Лосось</span></span></dd></div>      <div><dt>Вага</dt><dd>280 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>310 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Філадельфія люкс"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;philadelphia-lux&quot;,&quot;name&quot;:&quot;Філадельфія люкс&quot;,&quot;price_minor&quot;:31000,&quot;weight_g&quot;:280,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-philadelphia-classic" data-product data-product-id="philadelphia-classic" data-product-url="/products/philadelphia-classic.html" data-search="філадельфія класик вершковий сир, лосось, огірок">
+  <a class="product-media" href="/products/philadelphia-classic.html" aria-label="Переглянути Філадельфія класик"><img src="assets/img/philadelphia-classic.png" alt="Філадельфія класик" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/philadelphia-classic.html">Філадельфія класик</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Лосось</span><span>Огірок</span></span></dd></div>      <div><dt>Вага</dt><dd>235 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>250 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Філадельфія класик"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;philadelphia-classic&quot;,&quot;name&quot;:&quot;Філадельфія класик&quot;,&quot;price_minor&quot;:25000,&quot;weight_g&quot;:235,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-philadelphia-shrimp" data-product data-product-id="philadelphia-shrimp" data-product-url="/products/philadelphia-shrimp.html" data-search="філадельфія з креветкою вершковий сир, креветка, авокадо, ікра масаго">
+  <a class="product-media" href="/products/philadelphia-shrimp.html" aria-label="Переглянути Філадельфія з креветкою"><img src="assets/img/philadelphia-shrimp-enhanced.webp" alt="Філадельфія з креветкою" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/philadelphia-shrimp.html">Філадельфія з креветкою</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Креветка</span><span>Авокадо</span><span>Ікра масаго</span></span></dd></div>      <div><dt>Вага</dt><dd>225 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>250 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Філадельфія з креветкою"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;philadelphia-shrimp&quot;,&quot;name&quot;:&quot;Філадельфія з креветкою&quot;,&quot;price_minor&quot;:25000,&quot;weight_g&quot;:225,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-philadelphia-salmon" data-product data-product-id="philadelphia-salmon" data-product-url="/products/philadelphia-salmon.html" data-search="філадельфія з лососем вершковий сир, лосось, авокадо">
+  <a class="product-media" href="/products/philadelphia-salmon.html" aria-label="Переглянути Філадельфія з лососем"><img src="assets/img/philadelphia-salmon-enhanced.webp" alt="Філадельфія з лососем" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/philadelphia-salmon.html">Філадельфія з лососем</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Лосось</span><span>Авокадо</span></span></dd></div>      <div><dt>Вага</dt><dd>235 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>250 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Філадельфія з лососем"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;philadelphia-salmon&quot;,&quot;name&quot;:&quot;Філадельфія з лососем&quot;,&quot;price_minor&quot;:25000,&quot;weight_g&quot;:235,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-philadelphia-eel" data-product data-product-id="philadelphia-eel" data-product-url="/products/philadelphia-eel.html" data-search="філадельфія з вугром вершковий сир, вугор, огірок, білий кунжут, соус унагі">
+  <a class="product-media" href="/products/philadelphia-eel.html" aria-label="Переглянути Філадельфія з вугром"><img src="assets/img/philadelphia-eel-enhanced.webp" alt="Філадельфія з вугром" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/philadelphia-eel.html">Філадельфія з вугром</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Вугор</span><span>Огірок</span><span>Білий кунжут</span><span>Соус унагі</span></span></dd></div>      <div><dt>Вага</dt><dd>240 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>260 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Філадельфія з вугром"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;philadelphia-eel&quot;,&quot;name&quot;:&quot;Філадельфія з вугром&quot;,&quot;price_minor&quot;:26000,&quot;weight_g&quot;:240,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-philadelphia-smoked-salmon" data-product data-product-id="philadelphia-smoked-salmon" data-product-url="/products/philadelphia-smoked-salmon.html" data-search="філадельфія з копченим лососем в кунжуті вершковий сир, копчений лосось, огірок, білий кунжут">
+  <a class="product-media" href="/products/philadelphia-smoked-salmon.html" aria-label="Переглянути Філадельфія з копченим лососем в кунжуті"><img src="assets/img/philadelphia-smoked-salmon-enhanced.webp" alt="Філадельфія з копченим лососем в кунжуті" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/philadelphia-smoked-salmon.html">Філадельфія з копченим лососем в кунжуті</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Копчений лосось</span><span>Огірок</span><span>Білий кунжут</span></span></dd></div>      <div><dt>Вага</dt><dd>230 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>180 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Філадельфія з копченим лососем в кунжуті"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;philadelphia-smoked-salmon&quot;,&quot;name&quot;:&quot;Філадельфія з копченим лососем в кунжуті&quot;,&quot;price_minor&quot;:18000,&quot;weight_g&quot;:230,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-philadelphia-cheese" data-product data-product-id="philadelphia-cheese" data-product-url="/products/philadelphia-cheese.html" data-search="філадельфія cheese вершковий сир, сир чедер, лосось, салат айсберг, ікра масаго, соус шрірача, стружка тунця">
+  <a class="product-media" href="/products/philadelphia-cheese.html" aria-label="Переглянути Філадельфія Cheese"><img src="assets/img/philadelphia-cheese-enhanced.webp" alt="Філадельфія Cheese" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/philadelphia-cheese.html">Філадельфія Cheese</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Сир чедер</span><span>Лосось</span><span>Салат айсберг</span><span>Ікра масаго</span><span>Соус шрірача</span><span>Стружка тунця</span></span></dd></div>      <div><dt>Вага</dt><dd>250 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>270 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Філадельфія Cheese"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;philadelphia-cheese&quot;,&quot;name&quot;:&quot;Філадельфія Cheese&quot;,&quot;price_minor&quot;:27000,&quot;weight_g&quot;:250,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-philadelphia-green-avocado" data-product data-product-id="philadelphia-green-avocado" data-product-url="/products/philadelphia-green-avocado.html" data-search="філадельфія грін з авокадо вершковий сир, лосось, авокадо, огірок, чорний кунжут, соус світ чилі">
+  <a class="product-media" href="/products/philadelphia-green-avocado.html" aria-label="Переглянути Філадельфія грін з авокадо"><img src="assets/img/philadelphia-green-avocado-enhanced.webp" alt="Філадельфія грін з авокадо" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/philadelphia-green-avocado.html">Філадельфія грін з авокадо</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Лосось</span><span>Авокадо</span><span>Огірок</span><span>Чорний кунжут</span><span>Соус світ чилі</span></span></dd></div>      <div><dt>Вага</dt><dd>240 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>190 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Філадельфія грін з авокадо"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;philadelphia-green-avocado&quot;,&quot;name&quot;:&quot;Філадельфія грін з авокадо&quot;,&quot;price_minor&quot;:19000,&quot;weight_g&quot;:240,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-philadelphia-green-mango" data-product data-product-id="philadelphia-green-mango" data-product-url="/products/philadelphia-green-mango.html" data-search="філадельфія грін з манго вершковий сир, лосось, манго, огірок, чорний кунжут, соус світ чилі">
+  <a class="product-media" href="/products/philadelphia-green-mango.html" aria-label="Переглянути Філадельфія грін з манго"><img src="assets/img/philadelphia-green-mango-enhanced.webp" alt="Філадельфія грін з манго" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/philadelphia-green-mango.html">Філадельфія грін з манго</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Лосось</span><span>Манго</span><span>Огірок</span><span>Чорний кунжут</span><span>Соус світ чилі</span></span></dd></div>      <div><dt>Вага</dt><dd>240 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>200 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Філадельфія грін з манго"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;philadelphia-green-mango&quot;,&quot;name&quot;:&quot;Філадельфія грін з манго&quot;,&quot;price_minor&quot;:20000,&quot;weight_g&quot;:240,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-philadelphia-mango-eel" data-product data-product-id="philadelphia-mango-eel" data-product-url="/products/philadelphia-mango-eel.html" data-search="філадельфія манго у вугрі вершковий сир, креветка, манго, вугор, білий кунжут, соус унагі">
+  <a class="product-media" href="/products/philadelphia-mango-eel.html" aria-label="Переглянути Філадельфія манго у вугрі"><img src="assets/img/philadelphia-mango-eel-enhanced.webp" alt="Філадельфія манго у вугрі" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/philadelphia-mango-eel.html">Філадельфія манго у вугрі</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Креветка</span><span>Манго</span><span>Вугор</span><span>Білий кунжут</span><span>Соус унагі</span></span></dd></div>      <div><dt>Вага</dt><dd>250 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>310 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Філадельфія манго у вугрі"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;philadelphia-mango-eel&quot;,&quot;name&quot;:&quot;Філадельфія манго у вугрі&quot;,&quot;price_minor&quot;:31000,&quot;weight_g&quot;:250,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-philadelphia-cheesy" data-product data-product-id="philadelphia-cheesy" data-product-url="/products/philadelphia-cheesy.html" data-search="філадельфія сирна подвійний вершковий сир, лосось">
+  <a class="product-media" href="/products/philadelphia-cheesy.html" aria-label="Переглянути Філадельфія сирна"><img src="assets/img/philadelphia-cheesy-enhanced.webp" alt="Філадельфія сирна" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/philadelphia-cheesy.html">Філадельфія сирна</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Подвійний вершковий сир</span><span>Лосось</span></span></dd></div>      <div><dt>Вага</dt><dd>255 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>250 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Філадельфія сирна"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;philadelphia-cheesy&quot;,&quot;name&quot;:&quot;Філадельфія сирна&quot;,&quot;price_minor&quot;:25000,&quot;weight_g&quot;:255,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+</div>
+      </div>
+</section>
+<section class="menu-group" id="category-california" aria-labelledby="category-title-california" data-menu-group>
+  <button class="category-trigger" type="button" aria-expanded="true" aria-controls="category-panel-california">
+    <span id="category-title-california"><small>03</small>Каліфорнія</span><span aria-hidden="true">＋</span>
+  </button>
+  <div class="category-panel" id="category-panel-california">
+          <div class="product-grid"><article class="product-card" id="product-california-salmon" data-product data-product-id="california-salmon" data-product-url="/products/california-salmon.html" data-search="каліфорнія з лососем ">
+  <a class="product-media" href="/products/california-salmon.html" aria-label="Переглянути Каліфорнія з лососем"><img src="assets/img/california-salmon-enhanced.webp" alt="Каліфорнія з лососем" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/california-salmon.html">Каліфорнія з лососем</a></h3></header>
+        <dl class="product-meta">
+                      </dl>
+        <footer class="product-buy"><strong data-price-display>100 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Каліфорнія з лососем"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;california-salmon&quot;,&quot;name&quot;:&quot;Каліфорнія з лососем&quot;,&quot;price_minor&quot;:10000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-california-tuna" data-product data-product-id="california-tuna" data-product-url="/products/california-tuna.html" data-search="каліфорнія з тунцем вершковий сир, тунець, огірок, ікра масаго">
+  <a class="product-media" href="/products/california-tuna.html" aria-label="Переглянути Каліфорнія з тунцем"><img src="assets/img/california-tuna-enhanced.webp" alt="Каліфорнія з тунцем" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/california-tuna.html">Каліфорнія з тунцем</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Тунець</span><span>Огірок</span><span>Ікра масаго</span></span></dd></div>      <div><dt>Вага</dt><dd>240 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>190 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Каліфорнія з тунцем"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;california-tuna&quot;,&quot;name&quot;:&quot;Каліфорнія з тунцем&quot;,&quot;price_minor&quot;:19000,&quot;weight_g&quot;:240,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-california-eel" data-product data-product-id="california-eel" data-product-url="/products/california-eel.html" data-search="каліфорнія з вугром вершковий сир, вугор, огірок, білий і чорний кунжут, соус унагі">
+  <a class="product-media" href="/products/california-eel.html" aria-label="Переглянути Каліфорнія з вугром"><img src="assets/img/california-eel-enhanced.webp" alt="Каліфорнія з вугром" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/california-eel.html">Каліфорнія з вугром</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Вугор</span><span>Огірок</span><span>Білий і чорний кунжут</span><span>Соус унагі</span></span></dd></div>      <div><dt>Вага</dt><dd>255 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>220 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Каліфорнія з вугром"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;california-eel&quot;,&quot;name&quot;:&quot;Каліфорнія з вугром&quot;,&quot;price_minor&quot;:22000,&quot;weight_g&quot;:255,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+</div>
+      </div>
+</section>
+<section class="menu-group" id="category-dragons" aria-labelledby="category-title-dragons" data-menu-group>
+  <button class="category-trigger" type="button" aria-expanded="true" aria-controls="category-panel-dragons">
+    <span id="category-title-dragons"><small>04</small>Дракони</span><span aria-hidden="true">＋</span>
+  </button>
+  <div class="category-panel" id="category-panel-dragons">
+          <div class="product-grid"><article class="product-card" id="product-red-dragon" data-product data-product-id="red-dragon" data-product-url="/products/red-dragon.html" data-search="червоний дракон вершковий сир, креветка, огірок, лосось">
+  <a class="product-media" href="/products/red-dragon.html" aria-label="Переглянути Червоний дракон"><img src="assets/img/red-dragon-enhanced.webp" alt="Червоний дракон" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/red-dragon.html">Червоний дракон</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Креветка</span><span>Огірок</span><span>Лосось</span></span></dd></div>      <div><dt>Вага</dt><dd>255 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>280 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Червоний дракон"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;red-dragon&quot;,&quot;name&quot;:&quot;Червоний дракон&quot;,&quot;price_minor&quot;:28000,&quot;weight_g&quot;:255,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-gold-dragon" data-product data-product-id="gold-dragon" data-product-url="/products/gold-dragon.html" data-search="золотий дракон вершковий сир, креветка, огірок, вугор, білий кунжут, соус унагі">
+  <a class="product-media" href="/products/gold-dragon.html" aria-label="Переглянути Золотий дракон"><img src="assets/img/gold-dragon-enhanced.webp" alt="Золотий дракон" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/gold-dragon.html">Золотий дракон</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Креветка</span><span>Огірок</span><span>Вугор</span><span>Білий кунжут</span><span>Соус унагі</span></span></dd></div>      <div><dt>Вага</dt><dd>260 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>310 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Золотий дракон"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;gold-dragon&quot;,&quot;name&quot;:&quot;Золотий дракон&quot;,&quot;price_minor&quot;:31000,&quot;weight_g&quot;:260,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+</div>
+      </div>
+</section>
+<section class="menu-group" id="category-baked" aria-labelledby="category-title-baked" data-menu-group>
+  <button class="category-trigger" type="button" aria-expanded="true" aria-controls="category-panel-baked">
+    <span id="category-title-baked"><small>05</small>Запечені роли</span><span aria-hidden="true">＋</span>
+  </button>
+  <div class="category-panel" id="category-panel-baked">
+          <div class="product-grid"><article class="product-card" id="product-baked-shrimp" data-product data-product-id="baked-shrimp" data-product-url="/products/baked-shrimp.html" data-search="рол запечений з креветкою сир, креветка, пармезан, огірок">
+  <a class="product-media" href="/products/baked-shrimp.html" aria-label="Переглянути Рол запечений з креветкою"><img src="assets/img/baked-shrimp-enhanced.webp" alt="Рол запечений з креветкою" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/baked-shrimp.html">Рол запечений з креветкою</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Сир</span><span>Креветка</span><span>Пармезан</span><span>Огірок</span></span></dd></div>      <div><dt>Вага</dt><dd>305 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>280 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Рол запечений з креветкою"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;baked-shrimp&quot;,&quot;name&quot;:&quot;Рол запечений з креветкою&quot;,&quot;price_minor&quot;:28000,&quot;weight_g&quot;:305,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-baked-chicken" data-product data-product-id="baked-chicken" data-product-url="/products/baked-chicken.html" data-search="рол запечений з куркою сир, курка, ананас, моцарела, кунжут">
+  <a class="product-media" href="/products/baked-chicken.html" aria-label="Переглянути Рол запечений з куркою"><img src="assets/img/baked-chicken-enhanced.webp" alt="Рол запечений з куркою" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/baked-chicken.html">Рол запечений з куркою</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Сир</span><span>Курка</span><span>Ананас</span><span>Моцарела</span><span>Кунжут</span></span></dd></div>      <div><dt>Вага</dt><dd>284 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>280 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Рол запечений з куркою"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;baked-chicken&quot;,&quot;name&quot;:&quot;Рол запечений з куркою&quot;,&quot;price_minor&quot;:28000,&quot;weight_g&quot;:284,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-baked-smoked-salmon" data-product data-product-id="baked-smoked-salmon" data-product-url="/products/baked-smoked-salmon.html" data-search="рол запечений з копченим лососем сир, копчений лосось, пармезан, ікра масаго, огірок">
+  <a class="product-media" href="/products/baked-smoked-salmon.html" aria-label="Переглянути Рол запечений з копченим лососем"><img src="assets/img/baked-smoked-salmon-enhanced.webp" alt="Рол запечений з копченим лососем" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/baked-smoked-salmon.html">Рол запечений з копченим лососем</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Сир</span><span>Копчений лосось</span><span>Пармезан</span><span>Ікра масаго</span><span>Огірок</span></span></dd></div>      <div><dt>Вага</dt><dd>284 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>280 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Рол запечений з копченим лососем"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;baked-smoked-salmon&quot;,&quot;name&quot;:&quot;Рол запечений з копченим лососем&quot;,&quot;price_minor&quot;:28000,&quot;weight_g&quot;:284,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-baked-eel-shrimp" data-product data-product-id="baked-eel-shrimp" data-product-url="/products/baked-eel-shrimp.html" data-search="запечений рол з вугром та креветкою рис, крем-сир, вугор, креветка, огірок, мікс сирів">
+  <a class="product-media" href="/products/baked-eel-shrimp.html" aria-label="Переглянути Запечений рол з вугром та креветкою"><img src="assets/img/baked-eel-shrimp.png" alt="Запечений рол з вугром та креветкою" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/baked-eel-shrimp.html">Запечений рол з вугром та креветкою</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Рис</span><span>Крем-сир</span><span>Вугор</span><span>Креветка</span><span>Огірок</span><span>Мікс сирів</span></span></dd></div>      <div><dt>Вага</dt><dd>320 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>280 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Запечений рол з вугром та креветкою"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;baked-eel-shrimp&quot;,&quot;name&quot;:&quot;Запечений рол з вугром та креветкою&quot;,&quot;price_minor&quot;:28000,&quot;weight_g&quot;:320,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-baked-tuna" data-product data-product-id="baked-tuna" data-product-url="/products/baked-tuna.html" data-search="запечений рол з тунцем рис, крем-сир, тунець, огірок, мікс сирів, фірмовий соус, стружка тунця">
+  <a class="product-media" href="/products/baked-tuna.html" aria-label="Переглянути Запечений рол з тунцем"><img src="assets/img/baked-tuna.png" alt="Запечений рол з тунцем" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/baked-tuna.html">Запечений рол з тунцем</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Рис</span><span>Крем-сир</span><span>Тунець</span><span>Огірок</span><span>Мікс сирів</span><span>Фірмовий соус</span><span>Стружка тунця</span></span></dd></div>      <div><dt>Вага</dt><dd>318 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>280 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Запечений рол з тунцем"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;baked-tuna&quot;,&quot;name&quot;:&quot;Запечений рол з тунцем&quot;,&quot;price_minor&quot;:28000,&quot;weight_g&quot;:318,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+</div>
+      </div>
+</section>
+<section class="menu-group" id="category-rolls" aria-labelledby="category-title-rolls" data-menu-group>
+  <button class="category-trigger" type="button" aria-expanded="true" aria-controls="category-panel-rolls">
+    <span id="category-title-rolls"><small>06</small>Роли та макі</span><span aria-hidden="true">＋</span>
+  </button>
+  <div class="category-panel" id="category-panel-rolls">
+          <div class="product-grid"><article class="product-card" id="product-alaska" data-product data-product-id="alaska" data-product-url="/products/alaska.html" data-search="аляска вершковий сир, лосось, авокадо, ікра масаго">
+  <a class="product-media" href="/products/alaska.html" aria-label="Переглянути Аляска"><img src="assets/img/alaska-enhanced.webp" alt="Аляска" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/alaska.html">Аляска</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Лосось</span><span>Авокадо</span><span>Ікра масаго</span></span></dd></div>      <div><dt>Вага</dt><dd>235 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>190 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Аляска"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;alaska&quot;,&quot;name&quot;:&quot;Аляска&quot;,&quot;price_minor&quot;:19000,&quot;weight_g&quot;:235,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-felix-chicken" data-product data-product-id="felix-chicken" data-product-url="/products/felix-chicken.html" data-search="фелікс рол з куркою вершковий сир, курка, огірок, білий і чорний кунжут, соус унагі">
+  <a class="product-media" href="/products/felix-chicken.html" aria-label="Переглянути Фелікс рол з куркою"><img src="assets/img/felix-chicken-enhanced.webp" alt="Фелікс рол з куркою" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/felix-chicken.html">Фелікс рол з куркою</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Курка</span><span>Огірок</span><span>Білий і чорний кунжут</span><span>Соус унагі</span></span></dd></div>      <div><dt>Вага</dt><dd>240 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>160 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Фелікс рол з куркою"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;felix-chicken&quot;,&quot;name&quot;:&quot;Фелікс рол з куркою&quot;,&quot;price_minor&quot;:16000,&quot;weight_g&quot;:240,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-felix-tuna" data-product data-product-id="felix-tuna" data-product-url="/products/felix-tuna.html" data-search="фелікс рол з тунцем вершковий сир, тунець, ікра масаго, огірок, чорний кунжут, соус унагі">
+  <a class="product-media" href="/products/felix-tuna.html" aria-label="Переглянути Фелікс рол з тунцем"><img src="assets/img/felix-tuna-enhanced.webp" alt="Фелікс рол з тунцем" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/felix-tuna.html">Фелікс рол з тунцем</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Тунець</span><span>Ікра масаго</span><span>Огірок</span><span>Чорний кунжут</span><span>Соус унагі</span></span></dd></div>      <div><dt>Вага</dt><dd>240 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>200 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Фелікс рол з тунцем"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;felix-tuna&quot;,&quot;name&quot;:&quot;Фелікс рол з тунцем&quot;,&quot;price_minor&quot;:20000,&quot;weight_g&quot;:240,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-felix-fried-salmon" data-product data-product-id="felix-fried-salmon" data-product-url="/products/felix-fried-salmon.html" data-search="фелікс рол зі смаженим лососем вершковий сир, смажений лосось, салат айсберг, огірок, білий і чорний кунжут, соус світ чилі">
+  <a class="product-media" href="/products/felix-fried-salmon.html" aria-label="Переглянути Фелікс рол зі смаженим лососем"><img src="assets/img/felix-fried-salmon-enhanced.webp" alt="Фелікс рол зі смаженим лососем" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/felix-fried-salmon.html">Фелікс рол зі смаженим лососем</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Смажений лосось</span><span>Салат айсберг</span><span>Огірок</span><span>Білий і чорний кунжут</span><span>Соус світ чилі</span></span></dd></div>      <div><dt>Вага</dt><dd>260 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>220 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Фелікс рол зі смаженим лососем"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;felix-fried-salmon&quot;,&quot;name&quot;:&quot;Фелікс рол зі смаженим лососем&quot;,&quot;price_minor&quot;:22000,&quot;weight_g&quot;:260,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-tuna-roll" data-product data-product-id="tuna-roll" data-product-url="/products/tuna-roll.html" data-search="рол з тунцем вершковий сир, тунець, огірок, стружка тунця, соус унагі">
+  <a class="product-media" href="/products/tuna-roll.html" aria-label="Переглянути Рол з тунцем"><img src="assets/img/tuna-roll-enhanced.webp" alt="Рол з тунцем" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/tuna-roll.html">Рол з тунцем</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Тунець</span><span>Огірок</span><span>Стружка тунця</span><span>Соус унагі</span></span></dd></div>      <div><dt>Вага</dt><dd>240 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>210 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Рол з тунцем"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;tuna-roll&quot;,&quot;name&quot;:&quot;Рол з тунцем&quot;,&quot;price_minor&quot;:21000,&quot;weight_g&quot;:240,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-futomaki-smoked-salmon" data-product data-product-id="futomaki-smoked-salmon" data-product-url="/products/futomaki-smoked-salmon.html" data-search="футомакі з копченим лососем вершковий сир, копчений лосось, салат айсберг, огірок, ікра масаго">
+  <a class="product-media" href="/products/futomaki-smoked-salmon.html" aria-label="Переглянути Футомакі з копченим лососем"><img src="assets/img/futomaki-smoked-salmon-enhanced.webp" alt="Футомакі з копченим лососем" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/futomaki-smoked-salmon.html">Футомакі з копченим лососем</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Копчений лосось</span><span>Салат айсберг</span><span>Огірок</span><span>Ікра масаго</span></span></dd></div>      <div><dt>Вага</dt><dd>240 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>190 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Футомакі з копченим лососем"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;futomaki-smoked-salmon&quot;,&quot;name&quot;:&quot;Футомакі з копченим лососем&quot;,&quot;price_minor&quot;:19000,&quot;weight_g&quot;:240,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-futosurimi" data-product data-product-id="futosurimi" data-product-url="/products/futosurimi.html" data-search="футо сурімі вершковий сир, крабова паличка, ікра масаго, білий кунжут, соус унагі">
+  <a class="product-media" href="/products/futosurimi.html" aria-label="Переглянути Футо сурімі"><img src="assets/img/futosurimi-enhanced.webp" alt="Футо сурімі" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/futosurimi.html">Футо сурімі</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Вершковий сир</span><span>Крабова паличка</span><span>Ікра масаго</span><span>Білий кунжут</span><span>Соус унагі</span></span></dd></div>      <div><dt>Вага</dt><dd>220 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>170 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Футо сурімі"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;futosurimi&quot;,&quot;name&quot;:&quot;Футо сурімі&quot;,&quot;price_minor&quot;:17000,&quot;weight_g&quot;:220,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-maki-cucumber" data-product data-product-id="maki-cucumber" data-product-url="/products/maki-cucumber.html" data-search="макі з огірком норі, рис, огірок">
+  <a class="product-media" href="/products/maki-cucumber.html" aria-label="Переглянути Макі з огірком"><img src="assets/img/maki-cucumber.png" alt="Макі з огірком" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/maki-cucumber.html">Макі з огірком</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Норі</span><span>Рис</span><span>Огірок</span></span></dd></div>      <div><dt>Вага</dt><dd>110 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>80 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Макі з огірком"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;maki-cucumber&quot;,&quot;name&quot;:&quot;Макі з огірком&quot;,&quot;price_minor&quot;:8000,&quot;weight_g&quot;:110,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-maki-salmon" data-product data-product-id="maki-salmon" data-product-url="/products/maki-salmon.html" data-search="макі з лососем норі, рис, лосось">
+  <a class="product-media" href="/products/maki-salmon.html" aria-label="Переглянути Макі з лососем"><img src="assets/img/maki-salmon.png" alt="Макі з лососем" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/maki-salmon.html">Макі з лососем</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Норі</span><span>Рис</span><span>Лосось</span></span></dd></div>      <div><dt>Вага</dt><dd>120 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>90 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Макі з лососем"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;maki-salmon&quot;,&quot;name&quot;:&quot;Макі з лососем&quot;,&quot;price_minor&quot;:9000,&quot;weight_g&quot;:120,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+</div>
+      </div>
+</section>
+<section class="menu-group" id="category-hot-dishes" aria-labelledby="category-title-hot-dishes" data-menu-group>
+  <button class="category-trigger" type="button" aria-expanded="true" aria-controls="category-panel-hot-dishes">
+    <span id="category-title-hot-dishes"><small>07</small>Гарячі страви</span><span aria-hidden="true">＋</span>
+  </button>
+  <div class="category-panel" id="category-panel-hot-dishes">
+          <div class="product-grid"><article class="product-card" id="product-pork-steak" data-product data-product-id="pork-steak" data-product-url="/products/pork-steak.html" data-search="стейк свинячий балик, овочі гриль">
+  <a class="product-media" href="/products/pork-steak.html" aria-label="Переглянути Стейк"><img src="assets/img/steak.webp" alt="Стейк" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/pork-steak.html">Стейк</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Свинячий балик</span><span>Овочі гриль</span></span></dd></div>      <div><dt>Вага</dt><dd>350 г</dd></div>          </dl>
+    <fieldset class="product-options" data-product-options><legend>Соус на вибір (необов’язково)</legend>      <label><input type="radio" name="product-option-pork-steak" data-product-option value="sweet-chili" data-name="Соус світ чилі, 50 г" data-price="1000"><span>Соус світ чилі, 50 г · +10 ₴</span></label>          <label><input type="radio" name="product-option-pork-steak" data-product-option value="mild-ketchup" data-name="Кетчуп лагідний, 50 г" data-price="1000"><span>Кетчуп лагідний, 50 г · +10 ₴</span></label>          <label><input type="radio" name="product-option-pork-steak" data-product-option value="bbq" data-name="Соус BBQ, 50 г" data-price="1000"><span>Соус BBQ, 50 г · +10 ₴</span></label>    </fieldset>    <footer class="product-buy"><strong data-price-display>300 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Стейк"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;pork-steak&quot;,&quot;name&quot;:&quot;Стейк&quot;,&quot;price_minor&quot;:30000,&quot;weight_g&quot;:350,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[{&quot;id&quot;:&quot;sweet-chili&quot;,&quot;name&quot;:&quot;Соус світ чилі, 50 г&quot;,&quot;price_minor&quot;:1000},{&quot;id&quot;:&quot;mild-ketchup&quot;,&quot;name&quot;:&quot;Кетчуп лагідний, 50 г&quot;,&quot;price_minor&quot;:1000},{&quot;id&quot;:&quot;bbq&quot;,&quot;name&quot;:&quot;Соус BBQ, 50 г&quot;,&quot;price_minor&quot;:1000}],&quot;option_mode&quot;:&quot;single&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Соус на вибір (необов’язково)&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+</div>
+      </div>
+</section>
+<section class="menu-group" id="category-udon" aria-labelledby="category-title-udon" data-menu-group>
+  <button class="category-trigger" type="button" aria-expanded="true" aria-controls="category-panel-udon">
+    <span id="category-title-udon"><small>08</small>Удон</span><span aria-hidden="true">＋</span>
+  </button>
+  <div class="category-panel" id="category-panel-udon">
+          <div class="product-grid"><article class="product-card" id="product-udon-chicken" data-product data-product-id="udon-chicken" data-product-url="/products/udon-chicken.html" data-search="удон з куркою локшина удон, мікс овочів, куряче філе, азійські соуси, кунжут">
+  <a class="product-media" href="/products/udon-chicken.html" aria-label="Переглянути Удон з куркою"><img src="assets/img/udon-chicken.png" alt="Удон з куркою" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/udon-chicken.html">Удон з куркою</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Локшина удон</span><span>Мікс овочів</span><span>Куряче філе</span><span>Азійські соуси</span><span>Кунжут</span></span></dd></div>      <div><dt>Вага</dt><dd>250 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>190 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Удон з куркою"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;udon-chicken&quot;,&quot;name&quot;:&quot;Удон з куркою&quot;,&quot;price_minor&quot;:19000,&quot;weight_g&quot;:250,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-udon-shrimp" data-product data-product-id="udon-shrimp" data-product-url="/products/udon-shrimp.html" data-search="удон з креветками локшина удон, креветки, мікс овочів, азійські соуси, кунжут">
+  <a class="product-media" href="/products/udon-shrimp.html" aria-label="Переглянути Удон з креветками"><img src="assets/img/udon-shrimp.png" alt="Удон з креветками" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/udon-shrimp.html">Удон з креветками</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Локшина удон</span><span>Креветки</span><span>Мікс овочів</span><span>Азійські соуси</span><span>Кунжут</span></span></dd></div>      <div><dt>Вага</dt><dd>250 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>215 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Удон з креветками"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;udon-shrimp&quot;,&quot;name&quot;:&quot;Удон з креветками&quot;,&quot;price_minor&quot;:21500,&quot;weight_g&quot;:250,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+</div>
+      </div>
+</section>
+<section class="menu-group" id="category-funchose" aria-labelledby="category-title-funchose" data-menu-group>
+  <button class="category-trigger" type="button" aria-expanded="true" aria-controls="category-panel-funchose">
+    <span id="category-title-funchose"><small>09</small>Фунчоза</span><span aria-hidden="true">＋</span>
+  </button>
+  <div class="category-panel" id="category-panel-funchose">
+          <div class="product-grid"><article class="product-card" id="product-funchose-shrimp" data-product data-product-id="funchose-shrimp" data-product-url="/products/funchose-shrimp.html" data-search="фунчоза з креветками скляна локшина, креветки, овочі, соус світ чилі, кунжут">
+  <a class="product-media" href="/products/funchose-shrimp.html" aria-label="Переглянути Фунчоза з креветками"><img src="assets/img/funchose-shrimp.png" alt="Фунчоза з креветками" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/funchose-shrimp.html">Фунчоза з креветками</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Скляна локшина</span><span>Креветки</span><span>Овочі</span><span>Соус світ чилі</span><span>Кунжут</span></span></dd></div>      <div><dt>Вага</dt><dd>250 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>200 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Фунчоза з креветками"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;funchose-shrimp&quot;,&quot;name&quot;:&quot;Фунчоза з креветками&quot;,&quot;price_minor&quot;:20000,&quot;weight_g&quot;:250,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-funchose-chicken" data-product data-product-id="funchose-chicken" data-product-url="/products/funchose-chicken.html" data-search="фунчоза з куркою скляна локшина, куряче філе, овочі, соус світ чилі, кунжут">
+  <a class="product-media" href="/products/funchose-chicken.html" aria-label="Переглянути Фунчоза з куркою"><img src="assets/img/funchose-chicken.png" alt="Фунчоза з куркою" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/funchose-chicken.html">Фунчоза з куркою</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Скляна локшина</span><span>Куряче філе</span><span>Овочі</span><span>Соус світ чилі</span><span>Кунжут</span></span></dd></div>      <div><dt>Вага</dt><dd>250 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>170 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Фунчоза з куркою"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;funchose-chicken&quot;,&quot;name&quot;:&quot;Фунчоза з куркою&quot;,&quot;price_minor&quot;:17000,&quot;weight_g&quot;:250,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-funchose-pork" data-product data-product-id="funchose-pork" data-product-url="/products/funchose-pork.html" data-search="фунчоза зі свининою скляна локшина, свинячий балик, мікс овочів, соус світ чилі, кунжут">
+  <a class="product-media" href="/products/funchose-pork.html" aria-label="Переглянути Фунчоза зі свининою"><img src="assets/img/funchose-pork.png" alt="Фунчоза зі свининою" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/funchose-pork.html">Фунчоза зі свининою</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Скляна локшина</span><span>Свинячий балик</span><span>Мікс овочів</span><span>Соус світ чилі</span><span>Кунжут</span></span></dd></div>      <div><dt>Вага</dt><dd>250 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>180 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Фунчоза зі свининою"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;funchose-pork&quot;,&quot;name&quot;:&quot;Фунчоза зі свининою&quot;,&quot;price_minor&quot;:18000,&quot;weight_g&quot;:250,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+</div>
+      </div>
+</section>
+<section class="menu-group" id="category-syrnyky" aria-labelledby="category-title-syrnyky" data-menu-group>
+  <button class="category-trigger" type="button" aria-expanded="true" aria-controls="category-panel-syrnyky">
+    <span id="category-title-syrnyky"><small>10</small>Сирники</span><span aria-hidden="true">＋</span>
+  </button>
+  <div class="category-panel" id="category-panel-syrnyky">
+          <div class="product-grid"><article class="product-card" id="product-syrnyky-classic" data-product data-product-id="syrnyky-classic" data-product-url="/products/syrnyky-classic.html" data-search="класичні сирники ">
+  <a class="product-media" href="/products/syrnyky-classic.html" aria-label="Переглянути Класичні сирники"><img src="assets/img/syrnyky-classic.webp" alt="Класичні сирники" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/syrnyky-classic.html">Класичні сирники</a></h3></header>
+        <dl class="product-meta">
+            <div><dt>Вага</dt><dd>200 г</dd></div>          </dl>
+    <fieldset class="product-options" data-product-options data-product-options-required><legend>Соус на вибір</legend>      <label><input type="radio" name="product-option-syrnyky-classic" data-product-option value="sour-cream" data-name="Сметана" data-price="0"><span>Сметана</span></label>          <label><input type="radio" name="product-option-syrnyky-classic" data-product-option value="condensed-milk" data-name="Згущене молоко" data-price="0"><span>Згущене молоко</span></label>          <label><input type="radio" name="product-option-syrnyky-classic" data-product-option value="jam" data-name="Джем" data-price="0"><span>Джем</span></label>    <small class="product-option-error" data-product-option-error hidden>Оберіть один соус.</small></fieldset>    <footer class="product-buy"><strong data-price-display>90 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Класичні сирники"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;syrnyky-classic&quot;,&quot;name&quot;:&quot;Класичні сирники&quot;,&quot;price_minor&quot;:9000,&quot;weight_g&quot;:200,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[{&quot;id&quot;:&quot;sour-cream&quot;,&quot;name&quot;:&quot;Сметана&quot;,&quot;price_minor&quot;:0},{&quot;id&quot;:&quot;condensed-milk&quot;,&quot;name&quot;:&quot;Згущене молоко&quot;,&quot;price_minor&quot;:0},{&quot;id&quot;:&quot;jam&quot;,&quot;name&quot;:&quot;Джем&quot;,&quot;price_minor&quot;:0}],&quot;option_mode&quot;:&quot;single&quot;,&quot;options_required&quot;:true,&quot;option_label&quot;:&quot;Соус на вибір&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-syrnyky-raisins" data-product data-product-id="syrnyky-raisins" data-product-url="/products/syrnyky-raisins.html" data-search="сирники з родзинками ">
+  <a class="product-media" href="/products/syrnyky-raisins.html" aria-label="Переглянути Сирники з родзинками"><img src="assets/img/syrnyky-raisins.webp" alt="Сирники з родзинками" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/syrnyky-raisins.html">Сирники з родзинками</a></h3></header>
+        <dl class="product-meta">
+            <div><dt>Вага</dt><dd>200 г</dd></div>          </dl>
+    <fieldset class="product-options" data-product-options data-product-options-required><legend>Соус на вибір</legend>      <label><input type="radio" name="product-option-syrnyky-raisins" data-product-option value="sour-cream" data-name="Сметана" data-price="0"><span>Сметана</span></label>          <label><input type="radio" name="product-option-syrnyky-raisins" data-product-option value="condensed-milk" data-name="Згущене молоко" data-price="0"><span>Згущене молоко</span></label>          <label><input type="radio" name="product-option-syrnyky-raisins" data-product-option value="jam" data-name="Джем" data-price="0"><span>Джем</span></label>    <small class="product-option-error" data-product-option-error hidden>Оберіть один соус.</small></fieldset>    <footer class="product-buy"><strong data-price-display>95 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Сирники з родзинками"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;syrnyky-raisins&quot;,&quot;name&quot;:&quot;Сирники з родзинками&quot;,&quot;price_minor&quot;:9500,&quot;weight_g&quot;:200,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[{&quot;id&quot;:&quot;sour-cream&quot;,&quot;name&quot;:&quot;Сметана&quot;,&quot;price_minor&quot;:0},{&quot;id&quot;:&quot;condensed-milk&quot;,&quot;name&quot;:&quot;Згущене молоко&quot;,&quot;price_minor&quot;:0},{&quot;id&quot;:&quot;jam&quot;,&quot;name&quot;:&quot;Джем&quot;,&quot;price_minor&quot;:0}],&quot;option_mode&quot;:&quot;single&quot;,&quot;options_required&quot;:true,&quot;option_label&quot;:&quot;Соус на вибір&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+</div>
+      </div>
+</section>
+<section class="menu-group" id="category-sweet-rolls" aria-labelledby="category-title-sweet-rolls" data-menu-group>
+  <button class="category-trigger" type="button" aria-expanded="true" aria-controls="category-panel-sweet-rolls">
+    <span id="category-title-sweet-rolls"><small>11</small>Солодкі роли</span><span aria-hidden="true">＋</span>
+  </button>
+  <div class="category-panel" id="category-panel-sweet-rolls">
+          <div class="product-grid"><article class="product-card" id="product-sweet-forest-berries" data-product data-product-id="sweet-forest-berries" data-product-url="/products/sweet-forest-berries.html" data-search="солодкий рол «лісові ягоди» ананас, рисове тісто, вершковий сир, ягідний топінг, цукрова пудра">
+  <a class="product-media" href="/products/sweet-forest-berries.html" aria-label="Переглянути Солодкий рол «Лісові ягоди»"><img src="assets/img/sweet-forest-berries.png" alt="Солодкий рол «Лісові ягоди»" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/sweet-forest-berries.html">Солодкий рол «Лісові ягоди»</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Ананас</span><span>Рисове тісто</span><span>Вершковий сир</span><span>Ягідний топінг</span><span>Цукрова пудра</span></span></dd></div>      <div><dt>Вага</dt><dd>240 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>170 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Солодкий рол «Лісові ягоди»"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;sweet-forest-berries&quot;,&quot;name&quot;:&quot;Солодкий рол «Лісові ягоди»&quot;,&quot;price_minor&quot;:17000,&quot;weight_g&quot;:240,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-sweet-caramel" data-product data-product-id="sweet-caramel" data-product-url="/products/sweet-caramel.html" data-search="солодкий рол з карамеллю банан, рисове тісто, вершковий сир, карамельний топінг, цукрова пудра">
+  <a class="product-media" href="/products/sweet-caramel.html" aria-label="Переглянути Солодкий рол з карамеллю"><img src="assets/img/sweet-caramel.png" alt="Солодкий рол з карамеллю" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/sweet-caramel.html">Солодкий рол з карамеллю</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Банан</span><span>Рисове тісто</span><span>Вершковий сир</span><span>Карамельний топінг</span><span>Цукрова пудра</span></span></dd></div>      <div><dt>Вага</dt><dd>240 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>170 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Солодкий рол з карамеллю"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;sweet-caramel&quot;,&quot;name&quot;:&quot;Солодкий рол з карамеллю&quot;,&quot;price_minor&quot;:17000,&quot;weight_g&quot;:240,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-sweet-oreo-nutella" data-product data-product-id="sweet-oreo-nutella" data-product-url="/products/sweet-oreo-nutella.html" data-search="солодкий рол «орео-нутелла» банан, рисове тісто, вершковий сир, печиво oreo, шоколадний топінг">
+  <a class="product-media" href="/products/sweet-oreo-nutella.html" aria-label="Переглянути Солодкий рол «Орео-Нутелла»"><img src="assets/img/sweet-oreo-nutella.png" alt="Солодкий рол «Орео-Нутелла»" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/sweet-oreo-nutella.html">Солодкий рол «Орео-Нутелла»</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Банан</span><span>Рисове тісто</span><span>Вершковий сир</span><span>Печиво Oreo</span><span>Шоколадний топінг</span></span></dd></div>      <div><dt>Вага</dt><dd>295 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>220 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Солодкий рол «Орео-Нутелла»"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;sweet-oreo-nutella&quot;,&quot;name&quot;:&quot;Солодкий рол «Орео-Нутелла»&quot;,&quot;price_minor&quot;:22000,&quot;weight_g&quot;:295,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-sweet-cherry" data-product data-product-id="sweet-cherry" data-product-url="/products/sweet-cherry.html" data-search="солодкий рол з вишнею банан, рисове тісто, вершковий сир, вишневий топінг, цукрова пудра">
+  <a class="product-media" href="/products/sweet-cherry.html" aria-label="Переглянути Солодкий рол з вишнею"><img src="assets/img/sweet-cherry.png" alt="Солодкий рол з вишнею" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/sweet-cherry.html">Солодкий рол з вишнею</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Банан</span><span>Рисове тісто</span><span>Вершковий сир</span><span>Вишневий топінг</span><span>Цукрова пудра</span></span></dd></div>      <div><dt>Вага</dt><dd>240 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>170 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Солодкий рол з вишнею"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;sweet-cherry&quot;,&quot;name&quot;:&quot;Солодкий рол з вишнею&quot;,&quot;price_minor&quot;:17000,&quot;weight_g&quot;:240,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-sweet-strawberry" data-product data-product-id="sweet-strawberry" data-product-url="/products/sweet-strawberry.html" data-search="солодкий рол з полуницею рисове тісто, вершковий сир, полуничний топінг, цукрова пудра, банан">
+  <a class="product-media" href="/products/sweet-strawberry.html" aria-label="Переглянути Солодкий рол з полуницею"><img src="assets/img/sweet-strawberry.png" alt="Солодкий рол з полуницею" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/sweet-strawberry.html">Солодкий рол з полуницею</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Рисове тісто</span><span>Вершковий сир</span><span>Полуничний топінг</span><span>Цукрова пудра</span><span>Банан</span></span></dd></div>      <div><dt>Вага</dt><dd>240 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>170 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Солодкий рол з полуницею"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;sweet-strawberry&quot;,&quot;name&quot;:&quot;Солодкий рол з полуницею&quot;,&quot;price_minor&quot;:17000,&quot;weight_g&quot;:240,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-sweet-raspberry" data-product data-product-id="sweet-raspberry" data-product-url="/products/sweet-raspberry.html" data-search="солодкий рол з малиною банан, рисове тісто, вершковий сир, малиновий топінг, цукрова пудра">
+  <a class="product-media" href="/products/sweet-raspberry.html" aria-label="Переглянути Солодкий рол з малиною"><img src="assets/img/sweet-raspberry.png" alt="Солодкий рол з малиною" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/sweet-raspberry.html">Солодкий рол з малиною</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Банан</span><span>Рисове тісто</span><span>Вершковий сир</span><span>Малиновий топінг</span><span>Цукрова пудра</span></span></dd></div>      <div><dt>Вага</dt><dd>240 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>170 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Солодкий рол з малиною"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;sweet-raspberry&quot;,&quot;name&quot;:&quot;Солодкий рол з малиною&quot;,&quot;price_minor&quot;:17000,&quot;weight_g&quot;:240,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+</div>
+      </div>
+</section>
+<section class="menu-group" id="category-sweet-sets" aria-labelledby="category-title-sweet-sets" data-menu-group>
+  <button class="category-trigger" type="button" aria-expanded="true" aria-controls="category-panel-sweet-sets">
+    <span id="category-title-sweet-sets"><small>12</small>Солодкі сети</span><span aria-hidden="true">＋</span>
+  </button>
+  <div class="category-panel" id="category-panel-sweet-sets">
+          <div class="product-grid"><article class="product-card" id="product-sweet-set-big-love" data-product data-product-id="sweet-set-big-love" data-product-url="/products/sweet-set-big-love.html" data-search="солодкий сет «моє велике кохання» солодкий рол з полуницею; «лісові ягоди»; з карамеллю; «орео-нутелла»">
+  <a class="product-media" href="/products/sweet-set-big-love.html" aria-label="Переглянути Солодкий сет «Моє велике кохання»"><img src="assets/img/sweet-set-large.png" alt="Солодкий сет «Моє велике кохання»" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/sweet-set-big-love.html">Солодкий сет «Моє велике кохання»</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Солодкий рол з полуницею</span><span>«Лісові ягоди»</span><span>З карамеллю</span><span>«Орео-Нутелла»</span></span></dd></div>      <div><dt>Вага</dt><dd>1020 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>730 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Солодкий сет «Моє велике кохання»"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;sweet-set-big-love&quot;,&quot;name&quot;:&quot;Солодкий сет «Моє велике кохання»&quot;,&quot;price_minor&quot;:73000,&quot;weight_g&quot;:1020,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+<article class="product-card" id="product-sweet-set-small-love" data-product data-product-id="sweet-set-small-love" data-product-url="/products/sweet-set-small-love.html" data-search="солодкий сет «моє маленьке кохання» солодкий рол з полуницею; «лісові ягоди»; з карамеллю">
+  <a class="product-media" href="/products/sweet-set-small-love.html" aria-label="Переглянути Солодкий сет «Моє маленьке кохання»"><img src="assets/img/sweet-set-small.png" alt="Солодкий сет «Моє маленьке кохання»" loading="lazy" width="600" height="450"></a>
+  <div class="product-content">
+    <header class="product-heading"><h3><a href="/products/sweet-set-small-love.html">Солодкий сет «Моє маленьке кохання»</a></h3></header>
+        <dl class="product-meta">
+      <div class="ingredients-row"><dt>Склад</dt><dd><span class="ingredient-list"><span>Солодкий рол з полуницею</span><span>«Лісові ягоди»</span><span>З карамеллю</span></span></dd></div>      <div><dt>Вага</dt><dd>965 г</dd></div>          </dl>
+        <footer class="product-buy"><strong data-price-display>560 ₴</strong>
+      <div class="product-actions"><div class="qty product-qty" aria-label="Кількість Солодкий сет «Моє маленьке кохання»"><button type="button" data-product-qty="minus" aria-label="Зменшити кількість">−</button><span data-product-quantity aria-live="polite">1</span><button type="button" data-product-qty="plus" aria-label="Збільшити кількість">+</button></div><button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;sweet-set-small-love&quot;,&quot;name&quot;:&quot;Солодкий сет «Моє маленьке кохання»&quot;,&quot;price_minor&quot;:56000,&quot;weight_g&quot;:965,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button></div>    </footer>
+  </div>
+</article>
+</div>
+      </div>
+</section>
+<section class="menu-group" id="category-cocktails" aria-labelledby="category-title-cocktails" data-menu-group>
+  <button class="category-trigger" type="button" aria-expanded="true" aria-controls="category-panel-cocktails">
+    <span id="category-title-cocktails"><small>13</small>Коктейлі</span><span aria-hidden="true">＋</span>
+  </button>
+  <div class="category-panel" id="category-panel-cocktails">
+          <div class="drink-menu-list"><article class="drink-menu-item" id="product-cocktail-sex-on-the-beach" data-product data-product-id="cocktail-sex-on-the-beach" data-search="б/а секс на пляжі апельсиновий сік, гранатовий сік, сироп, лимонний сік, лід">
+  <header class="drink-menu-copy">
+    <h3>Б/а Секс на пляжі</h3>
+    <p>Апельсиновий сік, гранатовий сік, сироп, лимонний сік, лід</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>70 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;cocktail-sex-on-the-beach&quot;,&quot;name&quot;:&quot;Б\/а Секс на пляжі&quot;,&quot;price_minor&quot;:7000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-cocktail-pina-colada" data-product data-product-id="cocktail-pina-colada" data-search="б/а піна колада ананасовий сік, вершки, сироп, лід">
+  <header class="drink-menu-copy">
+    <h3>Б/а Піна колада</h3>
+    <p>Ананасовий сік, вершки, сироп, лід</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>70 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;cocktail-pina-colada&quot;,&quot;name&quot;:&quot;Б\/а Піна колада&quot;,&quot;price_minor&quot;:7000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-cocktail-mojito" data-product data-product-id="cocktail-mojito" data-search="б/а мохіто спрайт, лимонний сік, лайм, м’ята, сироп, лід">
+  <header class="drink-menu-copy">
+    <h3>Б/а Мохіто</h3>
+    <p>Спрайт, лимонний сік, лайм, м’ята, сироп, лід</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>70 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;cocktail-mojito&quot;,&quot;name&quot;:&quot;Б\/а Мохіто&quot;,&quot;price_minor&quot;:7000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-cocktail-blue-lagoon" data-product data-product-id="cocktail-blue-lagoon" data-search="б/а блакитна лагуна спрайт, сироп, лимонний сік, лимон, лід">
+  <header class="drink-menu-copy">
+    <h3>Б/а Блакитна лагуна</h3>
+    <p>Спрайт, сироп, лимонний сік, лимон, лід</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>70 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;cocktail-blue-lagoon&quot;,&quot;name&quot;:&quot;Б\/а Блакитна лагуна&quot;,&quot;price_minor&quot;:7000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-cocktail-barbie" data-product data-product-id="cocktail-barbie" data-search="б/а барбі ананасовий сік, сік банан-полуниця, сироп, згущене молоко, вершки, лід">
+  <header class="drink-menu-copy">
+    <h3>Б/а Барбі</h3>
+    <p>Ананасовий сік, сік банан-полуниця, сироп, згущене молоко, вершки, лід</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>70 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;cocktail-barbie&quot;,&quot;name&quot;:&quot;Б\/а Барбі&quot;,&quot;price_minor&quot;:7000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-cocktail-blue-orange" data-product data-product-id="cocktail-blue-orange" data-search="б/а blue orange спрайт, апельсиновий сік, сироп, лід">
+  <header class="drink-menu-copy">
+    <h3>Б/а Blue Orange</h3>
+    <p>Спрайт, апельсиновий сік, сироп, лід</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>70 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;cocktail-blue-orange&quot;,&quot;name&quot;:&quot;Б\/а Blue Orange&quot;,&quot;price_minor&quot;:7000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-cocktail-sicily" data-product data-product-id="cocktail-sicily" data-search="б/а сицилія schweppes, апельсиновий сік, сироп, лід">
+  <header class="drink-menu-copy">
+    <h3>Б/а Сицилія</h3>
+    <p>Schweppes, апельсиновий сік, сироп, лід</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>70 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;cocktail-sicily&quot;,&quot;name&quot;:&quot;Б\/а Сицилія&quot;,&quot;price_minor&quot;:7000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+</div>
+      </div>
+</section>
+<section class="menu-group" id="category-milkshakes" aria-labelledby="category-title-milkshakes" data-menu-group>
+  <button class="category-trigger" type="button" aria-expanded="true" aria-controls="category-panel-milkshakes">
+    <span id="category-title-milkshakes"><small>14</small>Молочні коктейлі</span><span aria-hidden="true">＋</span>
+  </button>
+  <div class="category-panel" id="category-panel-milkshakes">
+          <div class="drink-menu-list"><article class="drink-menu-item" id="product-milkshake-cherry" data-product data-product-id="milkshake-cherry" data-search="молочний коктейль «вишня» морозиво, молоко, вершки, вишневий топінг">
+  <header class="drink-menu-copy">
+    <h3>Молочний коктейль «Вишня»</h3>
+    <p>Морозиво, молоко, вершки, вишневий топінг</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>75 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;milkshake-cherry&quot;,&quot;name&quot;:&quot;Молочний коктейль «Вишня»&quot;,&quot;price_minor&quot;:7500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-milkshake-strawberry" data-product data-product-id="milkshake-strawberry" data-search="молочний коктейль «полуниця» морозиво, молоко, вершки, полуничний топінг">
+  <header class="drink-menu-copy">
+    <h3>Молочний коктейль «Полуниця»</h3>
+    <p>Морозиво, молоко, вершки, полуничний топінг</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>75 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;milkshake-strawberry&quot;,&quot;name&quot;:&quot;Молочний коктейль «Полуниця»&quot;,&quot;price_minor&quot;:7500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-milkshake-chocolate" data-product data-product-id="milkshake-chocolate" data-search="молочний коктейль «шоколад» морозиво, молоко, вершки, шоколадний топінг">
+  <header class="drink-menu-copy">
+    <h3>Молочний коктейль «Шоколад»</h3>
+    <p>Морозиво, молоко, вершки, шоколадний топінг</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>75 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;milkshake-chocolate&quot;,&quot;name&quot;:&quot;Молочний коктейль «Шоколад»&quot;,&quot;price_minor&quot;:7500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-milkshake-caramel" data-product data-product-id="milkshake-caramel" data-search="молочний коктейль «карамель» морозиво, молоко, вершки, карамельний топінг">
+  <header class="drink-menu-copy">
+    <h3>Молочний коктейль «Карамель»</h3>
+    <p>Морозиво, молоко, вершки, карамельний топінг</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>75 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;milkshake-caramel&quot;,&quot;name&quot;:&quot;Молочний коктейль «Карамель»&quot;,&quot;price_minor&quot;:7500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-milkshake-orange" data-product data-product-id="milkshake-orange" data-search="молочний коктейль «апельсин» морозиво, молоко, вершки, апельсиновий топінг">
+  <header class="drink-menu-copy">
+    <h3>Молочний коктейль «Апельсин»</h3>
+    <p>Морозиво, молоко, вершки, апельсиновий топінг</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>75 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;milkshake-orange&quot;,&quot;name&quot;:&quot;Молочний коктейль «Апельсин»&quot;,&quot;price_minor&quot;:7500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-milkshake-bubble-gum" data-product data-product-id="milkshake-bubble-gum" data-search="молочний коктейль «bubble gum» морозиво, молоко, вершки, топінг blue curacao">
+  <header class="drink-menu-copy">
+    <h3>Молочний коктейль «Bubble Gum»</h3>
+    <p>Морозиво, молоко, вершки, топінг Blue Curacao</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>75 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;milkshake-bubble-gum&quot;,&quot;name&quot;:&quot;Молочний коктейль «Bubble Gum»&quot;,&quot;price_minor&quot;:7500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+</div>
+      </div>
+</section>
+<section class="menu-group" id="category-coffee" aria-labelledby="category-title-coffee" data-menu-group>
+  <button class="category-trigger" type="button" aria-expanded="true" aria-controls="category-panel-coffee">
+    <span id="category-title-coffee"><small>15</small>Кава</span><span aria-hidden="true">＋</span>
+  </button>
+  <div class="category-panel" id="category-panel-coffee">
+          <div class="drink-menu-list"><article class="drink-menu-item" id="product-coffee-espresso" data-product data-product-id="coffee-espresso" data-search="еспресо кава еспресо">
+  <header class="drink-menu-copy">
+    <h3>Еспресо</h3>
+    <p>Кава еспресо</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>25 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;coffee-espresso&quot;,&quot;name&quot;:&quot;Еспресо&quot;,&quot;price_minor&quot;:2500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-coffee-americano" data-product data-product-id="coffee-americano" data-search="американо кава американо">
+  <header class="drink-menu-copy">
+    <h3>Американо</h3>
+    <p>Кава американо</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>30 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;coffee-americano&quot;,&quot;name&quot;:&quot;Американо&quot;,&quot;price_minor&quot;:3000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-coffee-americano-milk" data-product data-product-id="coffee-americano-milk" data-search="американо з молоком кава американо, молоко">
+  <header class="drink-menu-copy">
+    <h3>Американо з молоком</h3>
+    <p>Кава американо, молоко</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>45 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;coffee-americano-milk&quot;,&quot;name&quot;:&quot;Американо з молоком&quot;,&quot;price_minor&quot;:4500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-coffee-cappuccino" data-product data-product-id="coffee-cappuccino" data-search="капучино еспресо, молоко">
+  <header class="drink-menu-copy">
+    <h3>Капучино</h3>
+    <p>Еспресо, молоко</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>45 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;coffee-cappuccino&quot;,&quot;name&quot;:&quot;Капучино&quot;,&quot;price_minor&quot;:4500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-coffee-latte" data-product data-product-id="coffee-latte" data-search="лате еспресо, молоко">
+  <header class="drink-menu-copy">
+    <h3>Лате</h3>
+    <p>Еспресо, молоко</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>50 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;coffee-latte&quot;,&quot;name&quot;:&quot;Лате&quot;,&quot;price_minor&quot;:5000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-coffee-flat-white" data-product data-product-id="coffee-flat-white" data-search="флет вайт еспресо, молоко">
+  <header class="drink-menu-copy">
+    <h3>Флет вайт</h3>
+    <p>Еспресо, молоко</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>45 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;coffee-flat-white&quot;,&quot;name&quot;:&quot;Флет вайт&quot;,&quot;price_minor&quot;:4500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-coffee-matcha-anchan" data-product data-product-id="coffee-matcha-anchan" data-search="матча анчан матча анчан">
+  <header class="drink-menu-copy">
+    <h3>Матча анчан</h3>
+    <p>Матча анчан</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>50 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;coffee-matcha-anchan&quot;,&quot;name&quot;:&quot;Матча анчан&quot;,&quot;price_minor&quot;:5000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-coffee-kids-cocoa" data-product data-product-id="coffee-kids-cocoa" data-search="дитяче какао какао, молоко">
+  <header class="drink-menu-copy">
+    <h3>Дитяче какао</h3>
+    <p>Какао, молоко</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>50 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;coffee-kids-cocoa&quot;,&quot;name&quot;:&quot;Дитяче какао&quot;,&quot;price_minor&quot;:5000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-coffee-natural-cocoa" data-product data-product-id="coffee-natural-cocoa" data-search="какао натуральне натуральне какао, молоко">
+  <header class="drink-menu-copy">
+    <h3>Какао натуральне</h3>
+    <p>Натуральне какао, молоко</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>50 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;coffee-natural-cocoa&quot;,&quot;name&quot;:&quot;Какао натуральне&quot;,&quot;price_minor&quot;:5000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-tea" data-product data-product-id="tea" data-search="чай чай">
+  <header class="drink-menu-copy">
+    <h3>Чай</h3>
+    <p>Чай</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>30 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;tea&quot;,&quot;name&quot;:&quot;Чай&quot;,&quot;price_minor&quot;:3000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-coffee-orange" data-product data-product-id="coffee-orange" data-search="оранж кавовий напій з апельсином">
+  <header class="drink-menu-copy">
+    <h3>Оранж</h3>
+    <p>Кавовий напій з апельсином</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>65 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;coffee-orange&quot;,&quot;name&quot;:&quot;Оранж&quot;,&quot;price_minor&quot;:6500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-signature-tea" data-product data-product-id="signature-tea" data-search="фірмовий чай фірмовий чай">
+  <header class="drink-menu-copy">
+    <h3>Фірмовий чай</h3>
+    <p>Фірмовий чай</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>75 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;signature-tea&quot;,&quot;name&quot;:&quot;Фірмовий чай&quot;,&quot;price_minor&quot;:7500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+</div>
+      </div>
+</section>
+<section class="menu-group" id="category-hot-drinks" aria-labelledby="category-title-hot-drinks" data-menu-group>
+  <button class="category-trigger" type="button" aria-expanded="true" aria-controls="category-panel-hot-drinks">
+    <span id="category-title-hot-drinks"><small>16</small>Гарячі напої</span><span aria-hidden="true">＋</span>
+  </button>
+  <div class="category-panel" id="category-panel-hot-drinks">
+          <div class="drink-menu-list"><article class="drink-menu-item" id="product-hot-spiced-latte" data-product data-product-id="hot-spiced-latte" data-search="пряне лате допіо, молоко, кориця, спеції">
+  <header class="drink-menu-copy">
+    <h3>Пряне лате</h3>
+    <p>Допіо, молоко, кориця, спеції</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>70 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;hot-spiced-latte&quot;,&quot;name&quot;:&quot;Пряне лате&quot;,&quot;price_minor&quot;:7000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-hot-toffee-cappuccino" data-product data-product-id="hot-toffee-cappuccino" data-search="капучино тоффі еспресо, молоко, згущене молоко">
+  <header class="drink-menu-copy">
+    <h3>Капучино тоффі</h3>
+    <p>Еспресо, молоко, згущене молоко</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>65 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;hot-toffee-cappuccino&quot;,&quot;name&quot;:&quot;Капучино тоффі&quot;,&quot;price_minor&quot;:6500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-hot-apple-pie" data-product data-product-id="hot-apple-pie" data-search="apple pie яблучний сік, еспресо, ванільний цукор, сироп">
+  <header class="drink-menu-copy">
+    <h3>Apple Pie</h3>
+    <p>Яблучний сік, еспресо, ванільний цукор, сироп</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>60 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;hot-apple-pie&quot;,&quot;name&quot;:&quot;Apple Pie&quot;,&quot;price_minor&quot;:6000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-hot-cocoa-marshmallow" data-product data-product-id="hot-cocoa-marshmallow" data-search="какао з маршмелоу какао, молоко, вершки, маршмелоу">
+  <header class="drink-menu-copy">
+    <h3>Какао з маршмелоу</h3>
+    <p>Какао, молоко, вершки, маршмелоу</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>70 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;hot-cocoa-marshmallow&quot;,&quot;name&quot;:&quot;Какао з маршмелоу&quot;,&quot;price_minor&quot;:7000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-hot-apple-punch" data-product data-product-id="hot-apple-punch" data-search="яблучний пунш яблучний сік, мед, апельсин, кориця, імбир">
+  <header class="drink-menu-copy">
+    <h3>Яблучний пунш</h3>
+    <p>Яблучний сік, мед, апельсин, кориця, імбир</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>65 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;hot-apple-punch&quot;,&quot;name&quot;:&quot;Яблучний пунш&quot;,&quot;price_minor&quot;:6500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-hot-mulled-zero" data-product data-product-id="hot-mulled-zero" data-search="глінтвейн б/а вишневий сік, апельсиновий сік, кориця, гвоздика, мед, апельсин">
+  <header class="drink-menu-copy">
+    <h3>Глінтвейн б/а</h3>
+    <p>Вишневий сік, апельсиновий сік, кориця, гвоздика, мед, апельсин</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>65 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;hot-mulled-zero&quot;,&quot;name&quot;:&quot;Глінтвейн б\/а&quot;,&quot;price_minor&quot;:6500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-hot-signature-tea" data-product data-product-id="hot-signature-tea" data-search="авторський чай обліпиха, імбир, лісові ягоди, пюре, чай, фрукти">
+  <header class="drink-menu-copy">
+    <h3>Авторський чай</h3>
+    <p>Обліпиха, імбир, лісові ягоди, пюре, чай, фрукти</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>75 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;hot-signature-tea&quot;,&quot;name&quot;:&quot;Авторський чай&quot;,&quot;price_minor&quot;:7500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-hot-nut-honey-raf" data-product data-product-id="hot-nut-honey-raf" data-search="горіхово-медовий раф еспресо, молоко, вершки, арахісова паста, мед">
+  <header class="drink-menu-copy">
+    <h3>Горіхово-медовий раф</h3>
+    <p>Еспресо, молоко, вершки, арахісова паста, мед</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>65 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;hot-nut-honey-raf&quot;,&quot;name&quot;:&quot;Горіхово-медовий раф&quot;,&quot;price_minor&quot;:6500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-hot-nut-cappuccino" data-product data-product-id="hot-nut-cappuccino" data-search="горіховий капучино еспресо, молоко, арахісова паста, сироп">
+  <header class="drink-menu-copy">
+    <h3>Горіховий капучино</h3>
+    <p>Еспресо, молоко, арахісова паста, сироп</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>65 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;hot-nut-cappuccino&quot;,&quot;name&quot;:&quot;Горіховий капучино&quot;,&quot;price_minor&quot;:6500,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+<article class="drink-menu-item" id="product-hot-warm-relax" data-product data-product-id="hot-warm-relax" data-search="теплий relax ананасовий сік, персиковий сік, сироп, лимонний сік, збиті вершки">
+  <header class="drink-menu-copy">
+    <h3>Теплий Relax</h3>
+    <p>Ананасовий сік, персиковий сік, сироп, лимонний сік, збиті вершки</p>  </header>
+  <footer class="drink-menu-buy">
+    <strong data-price-display>70 ₴</strong>
+    <button type="button" class="button button--small" data-add-product='{&quot;id&quot;:&quot;hot-warm-relax&quot;,&quot;name&quot;:&quot;Теплий Relax&quot;,&quot;price_minor&quot;:7000,&quot;weight_g&quot;:null,&quot;delivery_available&quot;:true,&quot;available_options&quot;:[],&quot;option_mode&quot;:&quot;multi&quot;,&quot;options_required&quot;:false,&quot;option_label&quot;:&quot;Додатково&quot;,&quot;recommendations&quot;:[]}' >Додати</button>  </footer>
+</article>
+</div>
+      </div>
+</section>
+</div>
+    <p class="no-results" data-no-results hidden>Нічого не знайшли. Спробуйте іншу назву.</p>
+  </section>
+
+  <section class="steps" aria-labelledby="steps-title">
+    <header class="section-heading"><hgroup><p class="eyebrow">Усе просто</p><h2 id="steps-title">Як замовити</h2></hgroup></header>
+    <ol><li><span>01</span><h3>Оберіть</h3><p>Додайте страви з меню до кошика.</p></li><li><span>02</span><h3>Вкажіть</h3><p>Оберіть доставку або самовивіз і зручний час.</p></li><li><span>03</span><h3>Підтвердьте</h3><p>Надішліть замовлення та дочекайтеся дзвінка адміністратора.</p></li></ol>
+  </section>
+
+  <section class="home-info" aria-labelledby="home-info-title">
+    <header class="section-heading"><hgroup><p class="eyebrow">Коротко про головне</p><h2 id="home-info-title">Sushi Relax</h2></hgroup></header>
+    <div class="info-grid">
+      <article class="info-card"><h3>Про заклад</h3><p>Sushi Relax - суші-заклад у Гадячі. Готуємо роли та сети для самовивозу та доставки; замовлення приймаємо щодня з 10:00 до 21:00.</p><a class="text-link" href="/about.html">Дізнатися більше →</a></article>
+      <article class="info-card"><h3>Доставка та самовивіз</h3><p>Правила доставки ще уточнюються. Самовивіз можна обрати під час оформлення.</p><p>Доставка - за передплатою. Самовивіз оплачується при отриманні.</p><a class="text-link" href="/delivery.html">Умови отримання →</a></article>
+      <article class="info-card"><h3>Контакти</h3><p>м. Гадяч, вул. Соборна, 13а</p><a class="phone-link" href="tel:+380668398679">+380 66 839 86 79</a>
+<p>Замовлення: 10:00–21:00</p><a class="text-link" href="/contacts.html">Графік і контакти →</a></article>
+    </div>
+  </section>
+
+  <section class="split-info" aria-labelledby="split-info-title"><header><p class="eyebrow">Sushi Relax</p><h2 id="split-info-title">Ваш вечір.<br>Наші роли.</h2></header><div><p>Sushi Relax - суші-заклад у Гадячі. Готуємо роли та сети для самовивозу та доставки; замовлення приймаємо щодня з 10:00 до 21:00.</p><a class="text-link" href="/about.html">Більше про нас →</a></div></section>
+
+  <section class="seo-content" aria-labelledby="seo-content-title">
+    <p class="eyebrow">Суші у вашому місті</p>
+    <h2 id="seo-content-title">Суші та роли в Гадячі</h2>
+    <div class="seo-content-grid">
+      <section aria-labelledby="seo-menu-title">
+        <h3 id="seo-menu-title">Меню Sushi Relax</h3>
+        <p>Sushi Relax готує роли та сети в Гадячі для затишної вечері, зустрічі з друзями або святкового столу. У нашому меню представлені сети, класична «Філадельфія», «Каліфорнія», роли «Дракон», запечені та інші популярні позиції.</p>
+        <p>Каталог містить фотографії та актуальні ціни. У картках також зазначені склад і вага, щоб вам було легше обрати страву.</p>
+      </section>
+      <section aria-labelledby="seo-order-title">
+        <h3 id="seo-order-title">Як замовити суші в Гадячі</h3>
+        <p>Оформіть замовлення на сайті, вкажіть контактний номер, дату та зручний час отримання. Для самовивозу замовлення можна забрати за адресою: м. Гадяч, вул. Соборна, 13а. Умови доставки адміністратор підтвердить під час зв’язку.</p>
+        <p>Онлайн-замовлення приймаємо щодня з 10:00–21:00. Після надсилання ми зв’яжемося з вами, щоб підтвердити склад замовлення та час готовності.</p>        <p><a class="text-link" href="#menu">Переглянути меню →</a> <a class="text-link" href="/delivery.html">Доставка та самовивіз →</a></p>
+      </section>
+    </div>
+  </section>
+</main>
+<div class="sheet-backdrop" data-cart-close hidden></div>
+<aside class="cart-sheet" id="cart-sheet" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true" tabindex="-1">
+  <span class="sheet-handle" aria-hidden="true"></span>
+  <header><hgroup><p class="eyebrow">Ваше замовлення</p><h2 id="cart-title">Кошик</h2></hgroup><button class="icon-button" type="button" data-cart-close aria-label="Закрити кошик"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></header>
+  <section class="cart-items" aria-label="Позиції кошика" data-cart-items><p class="empty-state">Кошик поки порожній.</p></section>
+  <dl class="cart-summary"><div><dt>Позицій</dt><dd data-cart-lines>0</dd></div><div><dt>Одиниць</dt><dd data-cart-quantity>0</dd></div><div><dt>Орієнтовна вага</dt><dd data-cart-weight>-</dd></div><div class="cart-total"><dt>Попередня сума</dt><dd data-cart-total>0 ₴</dd></div></dl>
+  <a class="button button--wide" href="/checkout.html" data-checkout-link aria-disabled="true">Оформити замовлення</a>
+</aside>
+<footer class="site-footer">
+  <div class="site-footer-main">
+    <a class="brand brand--footer" href="/"><img class="brand-logo" src="assets/img/sushi-relax-logo.webp" alt="" width="64" height="64"><span>Sushi <em>Relax</em></span></a>
+    <address class="footer-contacts">
+      <a class="footer-contact phone-link" href="tel:+380668398679"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5 9 8.1 6.9 9.8a15.3 15.3 0 0 0 7.3 7.3l1.7-2.1 4.6 2.4-.8 3.1c-.2.8-1 1.4-1.8 1.4C9.2 21.9 2.1 14.8 2.1 6.1c0-.8.6-1.6 1.4-1.8l3.1-.8Z"/></svg><span>+380 66 839 86 79</span></a>      <a class="footer-contact" href="https://www.instagram.com/sushi_relax/" target="_blank" rel="noopener noreferrer"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg><span>@sushi_relax</span></a>      <p class="footer-contact"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>м. Гадяч, вул. Соборна, 13а</span></p>
+    </address>
+  </div>
+  <div class="site-footer-bottom"><p>© <span data-year></span> Sushi Relax. Усі права захищені.</p><a href="/privacy.html">Політика конфіденційності</a></div>
+  <p class="site-footer-credit"><span>Розробка сайту</span><a href="https://t.me/full_stack_lab" target="_blank" rel="noopener noreferrer">@full_stack_lab</a></p>
+</footer>
+<button class="cart-fab" type="button" data-cart-open aria-controls="cart-sheet" aria-label="Відкрити кошик">
+  <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.1 9.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L20 7H6"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg>
+  <span data-cart-count aria-live="polite" hidden>0</span>
+</button>
+<button class="to-top" type="button" aria-label="Повернутися вгору">↑</button>
+<script src="assets/js/app.js?v=20261026-7" defer></script>
+</body>
+</html>

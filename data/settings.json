@@ -1,0 +1,45 @@
+{
+    "site_name": "Sushi Relax",
+    "site_url": null,
+    "address": "вул. Соборна, 13а",
+    "city": "м. Гадяч",
+    "phone": "+380 66 839 86 79",
+    "instagram_url": "https://www.instagram.com/sushi_relax/",
+    "telegram_contact": null,
+    "about": "Sushi Relax - суші-заклад у Гадячі. Готуємо роли та сети для самовивозу та доставки; замовлення приймаємо щодня з 10:00 до 21:00.",
+    "orders": {
+        "manual_enabled": true,
+        "days_ahead": 7,
+        "slot_minutes": 30,
+        "lead_minutes": 60
+    },
+    "delivery": {
+        "minimum_minor": null,
+        "fee_minor": null,
+        "free_from_minor": null
+    },
+    "hours": {
+        "mon": { "open": "10:00", "close": "22:00" },
+        "tue": { "open": "10:00", "close": "22:00" },
+        "wed": { "open": "10:00", "close": "22:00" },
+        "thu": { "open": "10:00", "close": "22:00" },
+        "fri": { "open": "10:00", "close": "23:00" },
+        "sat": { "open": "10:00", "close": "23:00" },
+        "sun": { "open": "10:00", "close": "23:00" }
+    },
+    "order_hours": { "open": "10:00", "close": "21:00" },
+    "exceptions": [],
+    "banners": [],
+    "promocodes": [],
+    "promocodes_stack_with_promos": false,
+    "gift": {
+        "active": false,
+        "product_id": null,
+        "threshold_minor": null,
+        "threshold_basis": "after_discount",
+        "start": null,
+        "end": null
+    },
+    "promotions": [],
+    "privacy_text": "Це шаблон політики конфіденційності. Перед публікацією текст має перевірити власник і, за потреби, юрист."
+}

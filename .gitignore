@@ -1,0 +1,11 @@
+/var/backups/*
+/var/runtime/*
+/config/secrets.php
+/config/telegram-config.php
+/img/
+/Всі фото меню/
+/Усі оброблені фото/
+/data/*.lock
+.DS_Store
+*.log
+!.gitkeep
