@@ -26,7 +26,7 @@ function page_start(string $title, string $description, string $bodyClass = '', 
   <?php if ($siteUrl !== null): ?><meta property="og:image" content="<?=h($siteUrl)?>/assets/img/%D0%A1%D0%B5%D1%82%20_Elite%20Relax_.webp"><?php endif; ?>
   <link rel="icon" href="/assets/img/sushi-relax-logo.webp" type="image/webp">
   <link rel="apple-touch-icon" href="/assets/img/sushi-relax-logo.webp">
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20261027-16">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20261027-17">
 </head>
 <body class="<?= h($bodyClass) ?>">
 <a class="skip-link" href="#content">До вмісту</a>
