@@ -27,7 +27,7 @@ if ($siteUrl !== null) {
     <figure class="hero-visual"><img src="/assets/img/hero-interior-3176.webp" alt="Інтер’єр Sushi Relax" width="1200" height="1600" fetchpriority="high" decoding="async"></figure>
   </section>
 
-  <section class="ticker" aria-label="Переваги"><span>Свіже приготування</span><i>✦</i><span>Доставка · самовивіз · у закладі</span><i>✦</i><span>Замовлення онлайн</span></section>
+  <section class="ticker" aria-label="Переваги"><span>Свіже приготування</span><i>✦</i><span>Доставка · самовивіз · у закладі</span><i>✦</i><span>ЇЖ•ПИЙ•НАСОЛОДЖУЙСЯ</span></section>
 
   <section class="promotions" aria-labelledby="promotions-title" data-banner-section<?= $banners ? '' : ' hidden' ?>><header class="section-heading"><hgroup><p class="eyebrow">Спеціальні пропозиції</p><h2 id="promotions-title">Акції</h2></hgroup></header><div class="banner-grid" data-banner-grid><?php foreach($banners as $banner):?><a class="promo-banner" href="<?=h($banner['link']??'#menu')?>"><img src="<?=h(product_image(['image'=>$banner['image']]))?>" alt="" loading="lazy"><span><small><?=h(promotion_period_label($banner))?></small><strong><?=h($banner['title'])?></strong></span></a><?php endforeach;?></div></section>
 
