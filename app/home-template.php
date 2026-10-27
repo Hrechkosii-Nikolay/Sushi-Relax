@@ -24,7 +24,7 @@ if ($siteUrl !== null) {
       <div class="hero-actions"><a class="button" href="#menu">Замовити</a><a class="button button--reservation" href="/reservation.html"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg><span>Забронювати стіл</span></a></div>
       <p class="service-line" data-order-status><span class="status-dot <?= $open === true ? 'is-open' : '' ?>"></span><strong><?= $open === true ? 'Відчинено' : ($open === false ? 'Зачинено' : 'Графік уточнюється') ?></strong><span><?= h(location_text($site)) ?></span></p>
     </header>
-    <figure class="hero-visual"><img src="/assets/img/hero-interior-3184.webp" alt="Інтер’єр Sushi Relax" width="1200" height="1600" fetchpriority="high" decoding="async"></figure>
+    <figure class="hero-visual"><img src="/assets/img/hero-interior-3182.webp" alt="Затишний столик в інтер’єрі Sushi Relax" width="1200" height="1600" fetchpriority="high" decoding="async"></figure>
   </section>
 
   <section class="ticker" aria-label="Переваги"><span>Свіже приготування</span><i>✦</i><span>Доставка · самовивіз · у закладі</span><i>✦</i><span>ЇЖ•ПИЙ•НАСОЛОДЖУЙСЯ</span></section>

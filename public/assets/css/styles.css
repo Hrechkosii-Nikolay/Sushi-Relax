@@ -187,3 +187,5 @@ body.checkout-mode{width:100%;min-width:0;overflow-x:hidden}
 .menu-section>.section-heading{margin-bottom:24px}.menu-search{display:flex;justify-content:flex-end;margin:0 0 28px}.menu-search .search{display:block}.menu-search input{width:min(360px,100%)}@media(max-width:620px){.menu-search,.menu-search .search{width:100%}.menu-search{margin-bottom:22px}}
 .to-top{right:max(20px,calc((100vw - var(--max))/2 + 24px))}@media(max-width:620px){.to-top,.cart-fab~.to-top{right:16px}}
 .about-location-card{grid-column:1/-1}
+.hero-visual>img{object-position:50% 68%}
+@media(max-width:1024px){.hero-visual>img{object-position:50% center}}
