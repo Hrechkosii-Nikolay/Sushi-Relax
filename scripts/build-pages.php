@@ -61,7 +61,7 @@ foreach ($files as $file) {
 
     if ($extension === 'html') {
         $contents = preg_replace(
-            '~\b(href|src|action|data-product-url)=(["\'])/(?!/|Sushi-Relax/)~',
+            '~\b(href|src|action)=(["\'])/(?!/|Sushi-Relax/)~',
             '$1=$2' . $basePath,
             $contents
         ) ?? $contents;
@@ -73,7 +73,7 @@ foreach ($files as $file) {
         ) ?? $contents;
     } elseif ($extension === 'js') {
         $contents = preg_replace(
-            '~(["\'])/(?!/|Sushi-Relax/)(?=(?:api/|assets/|products/|qr-menu/|(?:index|about|contacts|delivery|privacy|reservation|checkout|success)\.html|#))~',
+            '~(["\'])/(?!/|Sushi-Relax/)(?=(?:api/|assets/|qr-menu/|(?:index|about|contacts|delivery|privacy|reservation|checkout|success)\.html|#))~',
             '$1' . $basePath,
             $contents
         ) ?? $contents;

@@ -78,7 +78,7 @@ function page_end(bool $withCart = true, array $scripts = []): void
 </button>
 <?php endif; ?>
 <button class="to-top" type="button" aria-label="Повернутися вгору">↑</button>
-<script src="/assets/js/app.js?v=20261027-10" defer></script>
+<script src="/assets/js/app.js?v=20261027-11" defer></script>
 <?php foreach ($scripts as $script): ?><script src="<?=h($script)?>" defer></script><?php endforeach; ?>
 </body>
 </html>
@@ -137,12 +137,11 @@ function product_card(array $product, bool $orderable = true, array $allProducts
     $hasPrice = is_int($currentPrice); $options = product_options($product); $payload = product_cart_payload($product, $allProducts);
     $optionMode = ($product['option_mode'] ?? 'multi') === 'single' ? 'single' : 'multi';
     $optionsRequired = ($product['options_required'] ?? false) === true;
-    $productUrl = product_static_url($product);
     ?>
-<article class="product-card"<?= $withAnchor ? ' id="product-' . h($product['id'] ?? '') . '"' : '' ?> data-product data-product-id="<?= h($product['id'] ?? '') ?>" data-product-url="<?=h($productUrl)?>" data-search="<?= h(mb_strtolower(($product['name'] ?? '') . ' ' . ($product['ingredients'] ?? ''))) ?>">
-  <a class="product-media" href="<?=h($productUrl)?>" aria-label="Переглянути <?=h($product['name'])?>"><img src="<?= h(product_image($product)) ?>" alt="<?= h($product['name']) ?>" loading="lazy" width="600" height="450"></a>
+<article class="product-card"<?= $withAnchor ? ' id="product-' . h($product['id'] ?? '') . '"' : '' ?> data-product data-product-id="<?= h($product['id'] ?? '') ?>" data-search="<?= h(mb_strtolower(($product['name'] ?? '') . ' ' . ($product['ingredients'] ?? ''))) ?>">
+  <figure class="product-media"><img src="<?= h(product_image($product)) ?>" alt="<?= h($product['name']) ?>" loading="lazy" width="600" height="450"></figure>
   <div class="product-content">
-    <header class="product-heading"><h3><a href="<?=h($productUrl)?>"><?= h($product['name']) ?></a></h3><?php if (!empty($product['badge'])): ?><span class="badge"><?= h($product['badge']) ?></span><?php endif; ?></header>
+    <header class="product-heading"><h3><?= h($product['name']) ?></h3><?php if (!empty($product['badge'])): ?><span class="badge"><?= h($product['badge']) ?></span><?php endif; ?></header>
     <?php if ($product['description'] ?? null): ?><p><?= h($product['description']) ?></p><?php endif; ?>
     <dl class="product-meta">
       <?php if ($product['ingredients'] ?? null): ?><div class="ingredients-row"><dt>Склад</dt><dd><?php ingredient_list((string)$product['ingredients']); ?></dd></div><?php endif; ?>
@@ -250,10 +249,4 @@ function cart_sheet(): void
   <a class="button button--wide" href="/checkout.html" data-checkout-link aria-disabled="true">Оформити замовлення</a>
 </aside>
 <?php
-}
-
-function product_static_url(array $product): string
-{
-    $id = preg_replace('/[^a-z0-9-]+/i', '-', (string)($product['id'] ?? ''));
-    return '/products/' . trim((string)$id, '-') . '.html';
 }

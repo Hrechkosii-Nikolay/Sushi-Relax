@@ -80,14 +80,4 @@ function build_static_content_pages(): void
 <?php page_end(true);
     });
 
-    $products = array_values($catalog['products'] ?? []);
-    $categoryOrder = array_flip(array_map(static fn(array $category): string => (string)($category['id'] ?? ''), $catalog['categories'] ?? []));
-    usort($products, static fn(array $left, array $right): int => [($categoryOrder[(string)($left['category'] ?? '')] ?? PHP_INT_MAX), (int)($left['order'] ?? 0)] <=> [($categoryOrder[(string)($right['category'] ?? '')] ?? PHP_INT_MAX), (int)($right['order'] ?? 0)]);
-    foreach ($products as $currentIndex => $product) {
-        $id = preg_replace('/[^a-z0-9-]+/i', '-', (string)($product['id'] ?? ''));
-        if ($id === '') continue;
-        write_static_html('products/' . $id . '.html', static function () use ($catalog, $products, $product, $currentIndex): void {
-            require APP_ROOT . '/app/product-template.php';
-        });
-    }
 }

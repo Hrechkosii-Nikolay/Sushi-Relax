@@ -102,39 +102,6 @@
   });
 
   document.addEventListener('click', event => {
-    const card = event.target.closest('[data-product][data-product-url]');
-    if (!card || event.target.closest('a,button,input,label,select,textarea,fieldset')) return;
-    location.href = card.dataset.productUrl;
-  });
-
-  const productImageLightbox = document.querySelector('[data-product-image-lightbox]');
-  document.addEventListener('click', event => {
-    const openButton = event.target.closest('[data-product-image-open]');
-    if (openButton && productImageLightbox) {
-      lastFocus = openButton;
-      productImageLightbox.showModal();
-      document.body.classList.add('image-lightbox-open');
-      productImageLightbox.querySelector('[data-product-image-close]')?.focus();
-      return;
-    }
-    if (event.target.closest('[data-product-image-close]') || event.target === productImageLightbox) productImageLightbox?.close();
-  });
-  productImageLightbox?.addEventListener('close', () => {
-    document.body.classList.remove('image-lightbox-open');
-    lastFocus?.focus();
-  });
-
-  document.addEventListener('keydown', event => {
-    if (!document.body.classList.contains('product-mode') || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
-    if (event.target.closest('input,textarea,select,button,a')) return;
-    const link = event.key === 'ArrowLeft' ? document.querySelector('[data-product-previous]') : event.key === 'ArrowRight' ? document.querySelector('[data-product-next]') : null;
-    if (link) {
-      event.preventDefault();
-      link.click();
-    }
-  });
-
-  document.addEventListener('click', event => {
     const quantityButton = event.target.closest('[data-product-qty]');
     if (quantityButton) {
       const card = quantityButton.closest('[data-product]'), output = card?.querySelector('[data-product-quantity]'); if (!output) return;

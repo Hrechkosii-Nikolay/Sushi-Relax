@@ -301,9 +301,6 @@ function build_sitemap(array $site): bool
     $base = normalized_site_url($site);
     if ($base === null) return false;
     $paths = ['/', '/reservation.html', '/delivery.html', '/about.html', '/contacts.html', '/privacy.html', '/qr-menu/'];
-    foreach (catalog()['products'] as $product) {
-        if (!empty($product['id'])) $paths[] = '/products/' . rawurlencode((string)$product['id']) . '.html';
-    }
     $items = '';
     foreach ($paths as $path) $items .= '  <url><loc>' . htmlspecialchars($base . $path, ENT_XML1 | ENT_QUOTES, 'UTF-8') . "</loc></url>\n";
     $xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n{$items}</urlset>\n";
