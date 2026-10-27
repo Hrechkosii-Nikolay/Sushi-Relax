@@ -26,7 +26,7 @@ function page_start(string $title, string $description, string $bodyClass = '', 
   <?php if ($siteUrl !== null): ?><meta property="og:image" content="<?=h($siteUrl)?>/assets/img/%D0%A1%D0%B5%D1%82%20_Elite%20Relax_.webp"><?php endif; ?>
   <link rel="icon" href="/assets/img/sushi-relax-logo.webp" type="image/webp">
   <link rel="apple-touch-icon" href="/assets/img/sushi-relax-logo.webp">
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20261027-20">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20261027-21">
 </head>
 <body class="<?= h($bodyClass) ?>">
 <a class="skip-link" href="#content">До вмісту</a>
@@ -78,7 +78,7 @@ function page_end(bool $withCart = true, array $scripts = []): void
 </button>
 <?php endif; ?>
 <button class="to-top" type="button" aria-label="Повернутися вгору">↑</button>
-<script src="/assets/js/app.js?v=20261027-9" defer></script>
+<script src="/assets/js/app.js?v=20261027-10" defer></script>
 <?php foreach ($scripts as $script): ?><script src="<?=h($script)?>" defer></script><?php endforeach; ?>
 </body>
 </html>
@@ -243,7 +243,7 @@ function cart_sheet(): void
     ?>
 <div class="sheet-backdrop" data-cart-close hidden></div>
 <aside class="cart-sheet" id="cart-sheet" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true" tabindex="-1">
-  <span class="sheet-handle" aria-hidden="true"></span>
+  <button class="sheet-handle" type="button" data-cart-drag aria-label="Потягніть вниз, щоб закрити кошик"><span aria-hidden="true"></span></button>
   <header><hgroup><p class="eyebrow">Ваше замовлення</p><h2 id="cart-title">Кошик</h2></hgroup><button class="icon-button" type="button" data-cart-close aria-label="Закрити кошик"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></header>
   <section class="cart-items" aria-label="Позиції кошика" data-cart-items><p class="empty-state">Кошик поки порожній.</p></section>
   <dl class="cart-summary"><div><dt>Позицій</dt><dd data-cart-lines>0</dd></div><div><dt>Одиниць</dt><dd data-cart-quantity>0</dd></div><div><dt>Орієнтовна вага</dt><dd data-cart-weight>-</dd></div><div class="cart-total"><dt>Попередня сума</dt><dd data-cart-total>0 ₴</dd></div></dl>

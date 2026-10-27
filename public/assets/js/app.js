@@ -168,9 +168,53 @@
   });
 
   const sheet = document.querySelector('.cart-sheet'); const backdrop = document.querySelector('.sheet-backdrop');
+  const sheetHandle = sheet?.querySelector('[data-cart-drag]');
+  let lockedScrollY = 0;
   const pageSiblings = () => [...document.body.children].filter(el => el !== sheet && el !== backdrop && el.tagName !== 'SCRIPT');
-  function openCart(source) { if (!sheet) return; lastFocus = source || document.activeElement; sheet.classList.add('is-open'); sheet.setAttribute('aria-hidden', 'false'); backdrop.hidden = false; pageSiblings().forEach(el => el.inert = true); document.body.classList.add('sheet-open'); sheet.querySelector('[data-cart-close]')?.focus(); }
-  function closeCart() { if (!sheet || sheet.getAttribute('aria-hidden') === 'true') return; sheet.classList.remove('is-open'); sheet.setAttribute('aria-hidden', 'true'); backdrop.hidden = true; pageSiblings().forEach(el => el.inert = false); document.body.classList.remove('sheet-open'); lastFocus?.focus(); }
+  const lockPageScroll = () => {
+    lockedScrollY = scrollY;
+    document.body.classList.add('sheet-open');
+    Object.assign(document.body.style, { position: 'fixed', top: `-${lockedScrollY}px`, left: '0', right: '0', width: '100%' });
+  };
+  const unlockPageScroll = () => {
+    document.body.classList.remove('sheet-open');
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+    const previousBehavior = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = 'auto';
+    scrollTo(0, lockedScrollY);
+    requestAnimationFrame(() => { document.documentElement.style.scrollBehavior = previousBehavior; });
+  };
+  function openCart(source) { if (!sheet) return; lastFocus = source || document.activeElement; sheet.classList.add('is-open'); sheet.setAttribute('aria-hidden', 'false'); backdrop.hidden = false; pageSiblings().forEach(el => el.inert = true); lockPageScroll(); sheet.querySelector('[data-cart-close]')?.focus(); }
+  function closeCart() { if (!sheet || sheet.getAttribute('aria-hidden') === 'true') return; sheet.classList.remove('is-dragging'); sheet.style.transform = ''; if (backdrop) backdrop.style.opacity = ''; sheet.classList.remove('is-open'); sheet.setAttribute('aria-hidden', 'true'); backdrop.hidden = true; pageSiblings().forEach(el => el.inert = false); unlockPageScroll(); lastFocus?.focus(); }
+  if (sheetHandle) {
+    let dragStartY = 0, dragOffset = 0, dragStartedAt = 0;
+    const resetDrag = () => { sheet.classList.remove('is-dragging'); sheet.style.transform = ''; if (backdrop) backdrop.style.opacity = ''; };
+    sheetHandle.addEventListener('pointerdown', event => {
+      if (event.button !== 0 || sheet.getAttribute('aria-hidden') === 'true') return;
+      dragStartY = event.clientY; dragOffset = 0; dragStartedAt = performance.now();
+      sheet.classList.add('is-dragging');
+      sheetHandle.setPointerCapture(event.pointerId);
+    });
+    sheetHandle.addEventListener('pointermove', event => {
+      if (!sheet.classList.contains('is-dragging')) return;
+      dragOffset = Math.max(0, event.clientY - dragStartY);
+      sheet.style.transform = `translate(-50%, ${dragOffset}px)`;
+      if (backdrop) backdrop.style.opacity = String(Math.max(0, 1 - dragOffset / Math.max(240, sheet.offsetHeight * .7)));
+    });
+    const finishDrag = event => {
+      if (!sheet.classList.contains('is-dragging')) return;
+      if (sheetHandle.hasPointerCapture(event.pointerId)) sheetHandle.releasePointerCapture(event.pointerId);
+      const duration = Math.max(1, performance.now() - dragStartedAt);
+      const shouldClose = dragOffset > Math.min(140, sheet.offsetHeight * .18) || (dragOffset > 35 && dragOffset / duration > .55);
+      shouldClose ? closeCart() : resetDrag();
+    };
+    sheetHandle.addEventListener('pointerup', finishDrag);
+    sheetHandle.addEventListener('pointercancel', resetDrag);
+  }
   document.querySelectorAll('[data-cart-open]').forEach(el => el.addEventListener('click', () => openCart(el)));
   document.querySelectorAll('[data-cart-close]').forEach(el => el.addEventListener('click', closeCart));
   document.addEventListener('keydown', event => {
