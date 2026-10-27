@@ -43,8 +43,8 @@ if ($siteUrl !== null) {
   </section>
 
   <section class="steps" aria-labelledby="steps-title">
-    <header class="section-heading"><hgroup><p class="eyebrow">Усе просто</p><h2 id="steps-title">Як замовити</h2></hgroup></header>
-    <ol><li><span>01</span><h3>Оберіть</h3><p>Додайте страви з меню до кошика.</p></li><li><span>02</span><h3>Вкажіть</h3><p>Оберіть доставку або самовивіз і зручний час.</p></li><li><span>03</span><h3>Підтвердьте</h3><p>Надішліть замовлення та дочекайтеся дзвінка адміністратора.</p></li></ol>
+    <header class="section-heading"><hgroup><p class="eyebrow steps-eyebrow">Усе просто</p><h2 id="steps-title">Як замовити</h2></hgroup></header>
+    <ol><li><span>01</span><h3>Оберіть</h3><p>Додайте страви з меню до кошика.</p></li><li><span>02</span><h3>Замовте</h3><p>Оберіть доставку або самовивіз і зручний час.</p></li><li><span>03</span><h3>Смакуйте</h3><p>Отримайте замовлення та насолоджуйтеся улюбленими стравами.</p></li></ol>
   </section>
 
   <section class="home-info" aria-labelledby="home-info-title">
