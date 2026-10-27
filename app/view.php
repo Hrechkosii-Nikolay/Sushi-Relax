@@ -167,7 +167,7 @@ function drink_menu_item(array $product, bool $orderable = true, array $allProdu
 <article class="drink-menu-item" id="product-<?=h($product['id'] ?? '')?>" data-product data-product-id="<?=h($product['id'] ?? '')?>" data-search="<?=h(mb_strtolower(($product['name'] ?? '') . ' ' . ($product['ingredients'] ?? '')))?>">
   <header class="drink-menu-copy">
     <h3><?=h($product['name'])?></h3>
-    <?php if ($product['ingredients'] ?? null): ?><p><?=h($product['ingredients'])?></p><?php endif; ?>
+    <?php if (($product['ingredients'] ?? null) && ($product['category'] ?? '') !== 'coffee'): ?><p><?=h($product['ingredients'])?></p><?php endif; ?>
   </header>
   <footer class="drink-menu-buy">
     <strong data-price-display><?php if(is_int($currentPrice) && is_int($regularPrice) && $currentPrice < $regularPrice): ?><del><?=h(money($regularPrice))?></del> <ins><?=h(money($currentPrice))?></ins><?php else: ?><?=h(money($currentPrice))?><?php endif; ?></strong>
