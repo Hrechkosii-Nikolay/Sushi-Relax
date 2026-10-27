@@ -39,7 +39,7 @@ function page_start(string $title, string $description, string $bodyClass = '', 
   <div class="nav-backdrop" data-nav-close hidden></div>
   <nav id="site-nav" class="site-nav" aria-label="Основна навігація">
     <button class="nav-close" type="button" data-nav-close aria-label="Закрити меню">×</button>
-    <a href="/#menu">Меню</a><a href="/reservation.html">Бронювання</a><a href="/delivery.html">Доставка та оплата</a><a href="/about.html">Про нас</a><a href="/contacts.html">Контакти</a><a href="/qr-menu/">QR-меню</a>
+    <a href="/#menu">Меню</a><a href="/delivery.html">Доставка та оплата</a><a href="/about.html">Про нас</a><a href="/contacts.html">Контакти</a><a href="/qr-menu/">QR-меню</a>
   </nav>
   <?php if (!in_array($bodyClass, ['qr-mode','success-mode','reservation-mode'], true)): ?>
     <button class="cart-button" type="button" data-cart-open aria-controls="cart-sheet" aria-label="Відкрити кошик">
