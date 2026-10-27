@@ -26,7 +26,7 @@ function page_start(string $title, string $description, string $bodyClass = '', 
   <?php if ($siteUrl !== null): ?><meta property="og:image" content="<?=h($siteUrl)?>/assets/img/%D0%A1%D0%B5%D1%82%20_Elite%20Relax_.webp"><?php endif; ?>
   <link rel="icon" href="/assets/img/sushi-relax-logo.webp" type="image/webp">
   <link rel="apple-touch-icon" href="/assets/img/sushi-relax-logo.webp">
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20261027-19">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20261027-20">
 </head>
 <body class="<?= h($bodyClass) ?>">
 <a class="skip-link" href="#content">До вмісту</a>
@@ -78,7 +78,7 @@ function page_end(bool $withCart = true, array $scripts = []): void
 </button>
 <?php endif; ?>
 <button class="to-top" type="button" aria-label="Повернутися вгору">↑</button>
-<script src="/assets/js/app.js?v=20261026-7" defer></script>
+<script src="/assets/js/app.js?v=20261027-8" defer></script>
 <?php foreach ($scripts as $script): ?><script src="<?=h($script)?>" defer></script><?php endforeach; ?>
 </body>
 </html>
@@ -203,9 +203,13 @@ function category_navigation(array $catalog): void
     }
     if (!$links) return;
     ?>
-<nav class="qr-category-nav" aria-label="Категорії меню"><ul class="qr-category-nav-list">
+<nav class="qr-category-nav" aria-label="Категорії меню">
+<button class="category-scroll-button category-scroll-button--left" type="button" data-category-scroll="left" aria-label="Прокрутити категорії вліво"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+<ul class="qr-category-nav-list">
   <?php foreach($links as $index => $link):?><li><a href="#<?=h($link['anchor'])?>" data-category-link<?= $index === 0 ? ' aria-current="true"' : '' ?>><?=h($link['name'])?></a></li><?php endforeach;?>
-</ul></nav>
+</ul>
+<button class="category-scroll-button category-scroll-button--right" type="button" data-category-scroll="right" aria-label="Прокрутити категорії вправо"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+</nav>
 <?php
 }
 

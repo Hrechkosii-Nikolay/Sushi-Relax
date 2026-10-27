@@ -57,7 +57,26 @@
     const trigger = target?.querySelector('.category-trigger');
     const panel = target?.querySelector('.category-panel');
     if (trigger && panel) { trigger.setAttribute('aria-expanded', 'true'); panel.hidden = false; }
+    link.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest', inline: 'center' });
   }));
+
+  document.querySelectorAll('.qr-category-nav').forEach(nav => {
+    const list = nav.querySelector('.qr-category-nav-list');
+    const left = nav.querySelector('[data-category-scroll="left"]');
+    const right = nav.querySelector('[data-category-scroll="right"]');
+    if (!list || !left || !right) return;
+    const updateScrollButtons = () => {
+      const maxScroll = Math.max(0, list.scrollWidth - list.clientWidth);
+      left.disabled = list.scrollLeft <= 2;
+      right.disabled = list.scrollLeft >= maxScroll - 2;
+    };
+    const scrollCategories = direction => list.scrollBy({ left: direction * Math.max(220, list.clientWidth * .7), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    left.addEventListener('click', () => scrollCategories(-1));
+    right.addEventListener('click', () => scrollCategories(1));
+    list.addEventListener('scroll', updateScrollButtons, { passive: true });
+    addEventListener('resize', updateScrollButtons);
+    requestAnimationFrame(updateScrollButtons);
+  });
 
   const revealHashProduct = () => {
     if (!location.hash.startsWith('#product-')) return;
