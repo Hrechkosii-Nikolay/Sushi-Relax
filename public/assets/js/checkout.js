@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   const fulfillmentLabel = value => ({ pickup: 'Самовивіз', dinein: 'У закладі', delivery: 'Доставка' }[value] || 'Не вибрано');
 
-  list.innerHTML = cart.length ? cart.map(row => `<li><span>${row.quantity} × ${api.escapeHtml(row.name)}${row.options?.length ? `<small>${row.options.map(option => api.escapeHtml(String(option.name || ''))).join(', ')}</small>` : ''}</span><strong>${money(row.price_minor * row.quantity)}</strong></li>`).join('') : '<li class="empty-state">Кошик порожній. Поверніться до меню та додайте позиції.</li>';
+  list.innerHTML = cart.length ? cart.map(row => `<li><span>${row.quantity} × ${api.escapeHtml(row.name)}${row.options?.length ? `<small>${row.options.map(option => api.escapeHtml(String(option.name || ''))).join(', ')}</small>` : ''}</span><strong>${money(row.price_minor * row.quantity)}${Number.isInteger(row.weight_g) ? ` · ${row.weight_g * row.quantity} г` : ''}</strong></li>`).join('') : '<li class="empty-state">Кошик порожній. Поверніться до меню та додайте позиції.</li>';
   document.querySelector('[data-checkout-subtotal]').textContent = money(cartTotal());
   document.querySelector('[data-checkout-total]').textContent = money(cartTotal());
   const firstStepButton = form.querySelector('[data-checkout-step="1"] [data-next-step]');
