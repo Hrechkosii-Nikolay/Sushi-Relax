@@ -6,6 +6,7 @@
 /Всі фото меню/
 /Усі оброблені фото/
 /data/*.lock
+/_site/
 .DS_Store
 *.log
 !.gitkeep
