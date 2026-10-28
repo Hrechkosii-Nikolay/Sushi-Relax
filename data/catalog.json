@@ -392,6 +392,20 @@
             "delivery_available": true
         },
         {
+            "id": "royal-dragon",
+            "category": "dragons",
+            "name": "Королівський дракон",
+            "image": "royal-dragon.webp",
+            "price_minor": 33000,
+            "weight_g": 326,
+            "prep_minutes": null,
+            "description": null,
+            "ingredients": "Креветка темпура, тунець, крем-сир, огірок, манго, ікра масаго, фірмовий соус",
+            "available": true,
+            "order": 30,
+            "delivery_available": true
+        },
+        {
             "id": "baked-shrimp",
             "category": "baked",
             "name": "Рол запечений з креветкою",
