@@ -197,5 +197,5 @@ body.checkout-mode{width:100%;min-width:0;overflow-x:hidden}
 .split-info-slogan{max-width:520px;font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.5}.split-info-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:28px}@media(max-width:620px){.split-info-actions{align-items:stretch;flex-direction:column;gap:16px}.split-info-actions .button{width:100%}}
 .ready-time-note{display:block;color:var(--orange-2);font-size:.82rem;line-height:1.45}
 .form-grid>.field{align-content:start}
-.home-contact-list{display:grid;gap:14px;margin-bottom:20px}.home-contact-row{display:flex;align-items:center;gap:12px;margin:0;color:var(--muted);font-style:normal}.home-contact-row.phone-link{color:var(--orange-2)}a.home-contact-row{transition:color .2s}a.home-contact-row:hover,a.home-contact-row:focus-visible{color:var(--orange-2)}
+.home-contact-list{display:grid;gap:14px;margin-bottom:20px}.home-contact-row{display:flex;align-items:center;gap:12px;margin:0;color:var(--muted);font-style:normal}a.home-contact-row{transition:color .2s}a.home-contact-row:hover,a.home-contact-row:focus-visible{color:var(--orange-2)}
 .seo-content .eyebrow{color:var(--orange)}
