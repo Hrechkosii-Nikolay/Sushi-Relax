@@ -108,6 +108,8 @@ if (!$isQrOrder) {
     if (!$orderAt || $orderAt < new DateTimeImmutable('today', $timezone) || $orderAt > new DateTimeImmutable('+' . (int)($site['orders']['days_ahead'] ?? 7) . ' days 23:59', $timezone)) send_json(['error' => 'Оберіть доступні дату та час.'], 422);
     $dateOnly = DateTimeImmutable::createFromFormat('!Y-m-d', $date, $timezone);
     if (!$dateOnly || !in_array($time, available_slots($site, $dateOnly), true)) send_json(['error' => 'Обраний час уже недоступний. Оновіть список.'], 422);
+    $deliveryEarliest = (string)($site['delivery']['earliest_time'] ?? '11:00');
+    if ($fulfillment === 'delivery' && preg_match('/^\d{2}:\d{2}$/', $deliveryEarliest) && $time < $deliveryEarliest) send_json(['error' => 'Доставку можна замовити не раніше ' . $deliveryEarliest . '.'], 422);
 }
 
 $items = $input['items'] ?? [];
@@ -157,7 +159,7 @@ $lines[] = '💵 Сума страв: ' . money($total);
 if ($quote['promo_code']) $lines[] = '🏷 Промокод: ' . $quote['promo_code'];
 if ($discount) $lines[] = '🔻 Знижка: −' . money($discount);
 if ($gift) $lines[] = '🎁 Подарунок: ' . $gift['name'] . ' - 0 ₴';
-if ($fulfillment === 'delivery') $lines[] = '🛵 Доставка: ' . money($deliveryFee);
+if ($fulfillment === 'delivery') $lines[] = '🛵 Доставка: у межах міста безкоштовна; за межі міста - таксі за тарифом перевізника';
 if (!$isQrOrder) $lines[] = '💳 РАЗОМ: ' . money($grandTotal);
 if ($comment !== '') {
     $lines[] = '';

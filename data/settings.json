@@ -15,8 +15,9 @@
     },
     "delivery": {
         "minimum_minor": 80000,
-        "fee_minor": null,
-        "free_from_minor": null
+        "fee_minor": 0,
+        "free_from_minor": 0,
+        "earliest_time": "11:00"
     },
     "hours": {
         "mon": { "open": "10:00", "close": "22:00" },

@@ -51,7 +51,7 @@ if ($siteUrl !== null) {
     <header class="section-heading"><hgroup><p class="eyebrow">Коротко про головне</p><h2 id="home-info-title">Sushi Relax</h2></hgroup></header>
     <div class="info-grid">
       <article class="info-card"><h3>Про заклад</h3><p><?=h($site['about'])?></p><a class="text-link" href="/about.html">Дізнатися більше →</a></article>
-      <article class="info-card"><h3>Доставка та самовивіз</h3><p>Мінімальна сума замовлення для доставки - <?=h(money($site['delivery']['minimum_minor']))?>. Вартість і зона доставки уточнюються під час підтвердження.</p><p>Доставка - за передплатою. Для самовивозу діє передплата 50%.</p><a class="text-link" href="/delivery.html">Умови отримання →</a></article>
+      <article class="info-card"><h3>Доставка та самовивіз</h3><p>Мінімальна сума замовлення для доставки - <?=h(money($site['delivery']['minimum_minor']))?>. У межах міста доставка безкоштовна, за межі міста - на таксі за тарифом перевізника.</p><p>Доставка доступна з 11:00 і здійснюється за передплатою. Для самовивозу діє передплата 50%.</p><a class="text-link" href="/delivery.html">Умови отримання →</a></article>
       <article class="info-card"><h3>Контакти</h3><p><?=h(location_text($site))?></p><?php if($site['phone']??null):phone_actions($site);else:?><p>Телефон буде додано після підтвердження.</p><?php endif;?><?php if($orderHours=order_hours_text($site)):?><p>Замовлення: <?=h($orderHours)?></p><?php endif;?><a class="text-link" href="/contacts.html">Графік і контакти →</a></article>
     </div>
   </section>

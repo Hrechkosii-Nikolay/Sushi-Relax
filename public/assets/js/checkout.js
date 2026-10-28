@@ -36,6 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
     return `${value}–${String(Math.floor(end / 60)).padStart(2, '0')}:${String(end % 60).padStart(2, '0')}`;
   };
   const fulfillmentLabel = value => ({ pickup: 'Самовивіз', dinein: 'У закладі', delivery: 'Доставка' }[value] || 'Не вибрано');
+  const deliveryEarliestMinutes = 11 * 60;
+  const filterSlotsForFulfillment = options => {
+    if (form.querySelector('[name="fulfillment"]:checked').value !== 'delivery') return options;
+    return options.filter(slot => {
+      const match = /^(\d{2}):(\d{2})$/.exec(slot.value || '');
+      return match && Number(match[1]) * 60 + Number(match[2]) >= deliveryEarliestMinutes;
+    });
+  };
 
   list.innerHTML = cart.length ? cart.map(row => `<li><span>${row.quantity} × ${api.escapeHtml(row.name)}${row.options?.length ? `<small>${row.options.map(option => api.escapeHtml(String(option.name || ''))).join(', ')}</small>` : ''}</span><strong>${money(row.price_minor * row.quantity)}${Number.isInteger(row.weight_g) ? ` · ${row.weight_g * row.quantity} г` : ''}</strong></li>`).join('') : '<li class="empty-state">Кошик порожній. Поверніться до меню та додайте позиції.</li>';
   document.querySelector('[data-checkout-subtotal]').textContent = money(cartTotal());
@@ -76,9 +84,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('[data-checkout-gift]').textContent = result.gift?.name || '';
     const deliveryRow = document.querySelector('[data-delivery-row]');
     const deliverySelected = form.querySelector('[name="fulfillment"]:checked').value === 'delivery';
-    const deliveryConfigured = form.dataset.deliveryEnabled === '1';
     deliveryRow.hidden = !deliverySelected && !result.delivery_minor;
-    document.querySelector('[data-checkout-delivery]').textContent = deliverySelected && !deliveryConfigured ? 'Уточнюється' : money(result.delivery_minor);
+    document.querySelector('[data-checkout-delivery]').textContent = deliverySelected
+      ? 'Безкоштовно в межах міста'
+      : money(result.delivery_minor);
   };
 
   const localQuote = () => ({ subtotal_minor: cartTotal(), discount_minor: 0, delivery_minor: 0, total_minor: cartTotal(), gift: null, promo_code: null });
@@ -203,14 +212,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (result.orders_enabled && (result.slot_options || result.slots || []).length) {
         backendOrdersAvailable = true;
         serverSubmission = form.querySelector('[name="fulfillment"]:checked').value !== 'delivery' || form.dataset.deliveryEnabled === '1';
-        renderSlots(result.slot_options || result.slots.map(slot => ({ value: slot, label: intervalLabel(slot) })));
+        renderSlots(filterSlotsForFulfillment(result.slot_options || result.slots.map(slot => ({ value: slot, label: intervalLabel(slot) }))));
       } else {
         backendOrdersAvailable = false; serverSubmission = false;
-        renderSlots(localSlots(dateInput.value));
+        renderSlots(filterSlotsForFulfillment(localSlots(dateInput.value)));
       }
     } catch {
       backendOrdersAvailable = false; serverSubmission = false;
-      renderSlots(localSlots(dateInput.value));
+      renderSlots(filterSlotsForFulfillment(localSlots(dateInput.value)));
     }
     if (savedTimeToRestore && Array.from(timeInput.options).some(option => option.value === savedTimeToRestore)) {
       timeInput.value = savedTimeToRestore;
@@ -243,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fulfillmentNotes = {
       pickup: 'Для самовивозу діє передплата 50%. Заберіть замовлення у Sushi Relax за адресою: м. Гадяч, вул. Соборна, 13а. На наступному кроці оберіть дату та час готовності.',
       dinein: checkoutSource === 'qr' ? 'Ви оформлюєте замовлення через QR-меню в закладі. Перевірте склад кошика та вкажіть контактні дані - замовлення одразу надійде адміністратору.' : 'Оберіть дату, час і кількість персон - ми підготуємо замовлення до вашого приходу. Можливість розміщення у закладі підтвердить адміністратор.',
-      delivery: 'Мінімальна сума замовлення для доставки - 800 грн. Для доставки діє передплата. На наступному кроці вкажіть адресу, дату та зручний час. Після підтвердження замовлення адміністратор надасть реквізити, суму до сплати та повідомить орієнтовний час доставки.'
+      delivery: 'Мінімальна сума замовлення для доставки - 800 грн. У межах міста доставка безкоштовна, за межі міста - на таксі за тарифом перевізника. Доставку можна замовити не раніше 11:00. Для доставки діє передплата.'
     };
     if (fulfillmentNote) fulfillmentNote.textContent = fulfillmentNotes[fulfillment] || '';
     addressField.hidden = !delivery; addressInput.required = delivery;
@@ -256,6 +265,11 @@ document.addEventListener('DOMContentLoaded', () => {
     maxUnlockedStep = Math.min(maxUnlockedStep, 2);
     saveCustomerState();
     syncFulfillment();
+    if (!isQrOrder) {
+      savedTimeToRestore = '';
+      timeInput.value = '';
+      loadSlots();
+    }
     syncStepNavigation();
   }));
   syncFulfillment();
