@@ -56,7 +56,7 @@ if ($siteUrl !== null) {
     </div>
   </section>
 
-  <section class="split-info" aria-labelledby="split-info-title"><header><p class="eyebrow">Sushi Relax</p><h2 id="split-info-title">Ваш вечір.<br>Наші роли.</h2></header><div><p><?= h($site['about']) ?></p><a class="text-link" href="/about.html">Більше про нас →</a></div></section>
+  <section class="split-info" aria-labelledby="split-info-title"><header><p class="eyebrow">Sushi Relax</p><h2 id="split-info-title">Ваш вечір.<br>Наші роли.</h2></header><div><p class="split-info-slogan">Смак, який збирає разом. Обирайте улюблені роли та створюйте вечір, до якого хочеться повертатися.</p><div class="split-info-actions"><a class="button" href="#menu">Замовити</a><a class="text-link" href="/about.html">Більше про нас →</a></div></div></section>
 
   <section class="seo-content" aria-labelledby="seo-content-title">
     <p class="eyebrow">Суші у вашому місті</p>

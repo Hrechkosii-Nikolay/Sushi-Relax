@@ -194,3 +194,4 @@ body.checkout-mode{width:100%;min-width:0;overflow-x:hidden}
 .steps .steps-eyebrow{color:var(--orange)}
 .product-media{margin:0}
 .steps h3{text-transform:uppercase}
+.split-info-slogan{max-width:520px;font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.5}.split-info-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:28px}@media(max-width:620px){.split-info-actions{align-items:stretch;flex-direction:column;gap:16px}.split-info-actions .button{width:100%}}
