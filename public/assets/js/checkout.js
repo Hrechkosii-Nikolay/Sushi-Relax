@@ -200,6 +200,16 @@ document.addEventListener('DOMContentLoaded', () => {
     timeInput.replaceChildren(new Option(options.length ? 'Оберіть час' : 'На цю дату немає доступного часу', ''));
     options.forEach(slot => timeInput.add(new Option(slot.label, slot.value)));
     timeInput.disabled = options.length === 0;
+    const readyTimeNote = document.querySelector('[data-ready-time-note]');
+    if (readyTimeNote) {
+      const fulfillment = form.querySelector('[name="fulfillment"]:checked').value;
+      const sameDay = dateInput.value === isoDate(new Date());
+      if (!options.length) readyTimeNote.textContent = 'На цю дату доступного часу немає.';
+      else if (!sameDay) readyTimeNote.textContent = `Перший доступний час: ${options[0].label}.`;
+      else if (fulfillment === 'pickup') readyTimeNote.textContent = `Забрати замовлення можна не раніше ніж через 1 годину. Найближчий час: ${options[0].label}.`;
+      else if (fulfillment === 'delivery') readyTimeNote.textContent = `Найближчий доступний час доставки: ${options[0].label}.`;
+      else readyTimeNote.textContent = `Найближчий доступний час: ${options[0].label}.`;
+    }
   };
 
   async function loadSlots() {
