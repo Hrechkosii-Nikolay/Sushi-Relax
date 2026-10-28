@@ -448,6 +448,20 @@
             "delivery_available": true
         },
         {
+            "id": "baked-octopus",
+            "category": "baked",
+            "name": "Запечений рол з восьминогом",
+            "image": "baked-octopus.webp",
+            "price_minor": 32000,
+            "weight_g": 344,
+            "prep_minutes": null,
+            "description": null,
+            "ingredients": "Восьминіг, огірок, крабова паличка, крем-сир, сирний мікс, соус унагі",
+            "available": true,
+            "order": 40,
+            "delivery_available": true
+        },
+        {
             "id": "alaska",
             "category": "rolls",
             "name": "Аляска",
