@@ -336,6 +336,20 @@
             "delivery_available": true
         },
         {
+            "id": "philadelphia-double",
+            "category": "philadelphia",
+            "name": "Філадельфія double",
+            "image": "philadelphia-double.webp",
+            "price_minor": 30000,
+            "weight_g": 305,
+            "prep_minutes": null,
+            "description": null,
+            "ingredients": "Лосось, крем-сир, авокадо, огірок",
+            "available": true,
+            "order": 120,
+            "delivery_available": true
+        },
+        {
             "id": "california-salmon",
             "category": "california",
             "name": "Каліфорнія з лососем",
