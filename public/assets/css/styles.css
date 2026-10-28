@@ -59,7 +59,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{opacity:1;cursor:pointer;f
 @keyframes cart-bump{50%{transform:scale(1.18)}}
 .icon-button{display:inline-grid;place-items:center;padding:0;line-height:1}
 .icon-button svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
-@media(max-width:620px){.cart-button{font-size:inherit;padding:8px 10px}.cart-button:before{content:none}.cart-button .cart-button-label{display:none}.cart-fab{right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:58px;height:58px}.cart-fab~.to-top{right:16px;bottom:calc(92px + env(safe-area-inset-bottom,0px))}}
+@media(max-width:620px){.cart-button{font-size:inherit;padding:8px 10px}.cart-button:before{content:none}.cart-button .cart-button-label{display:none}.cart-fab{right:16px;bottom:calc(44px + env(safe-area-inset-bottom,0px));width:58px;height:58px}.cart-fab~.to-top{right:16px;bottom:calc(114px + env(safe-area-inset-bottom,0px))}}
 
 /* Compact, immediately visible menu */
 .menu-section .product-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
