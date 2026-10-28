@@ -495,7 +495,7 @@ function available_slots(array $settings, DateTimeImmutable $date): array
     $close = DateTimeImmutable::createFromFormat('!Y-m-d H:i', $date->format('Y-m-d') . ' ' . $hours['close'], $timezone);
     if (!$cursor || !$close || $close <= $cursor) return [];
     $now = new DateTimeImmutable('now', $timezone);
-    $leadMinutes = max(0, (int) ($settings['orders']['lead_minutes'] ?? 60));
+    $leadMinutes = max(0, (int) ($settings['orders']['lead_minutes'] ?? 40));
     $earliest = $now->modify('+' . $leadMinutes . ' minutes');
     $slots = [];
     while ($cursor < $close) {

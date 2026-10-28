@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const localSlots = selectedDate => {
     const now = new Date(), sameDay = selectedDate === isoDate(now), slots = [];
     for (let minutes = 10 * 60; minutes < 21 * 60; minutes += 30) {
-      if (sameDay && minutes < now.getHours() * 60 + now.getMinutes() + 60) continue;
+      if (sameDay && minutes < now.getHours() * 60 + now.getMinutes() + 40) continue;
       const value = `${String(Math.floor(minutes / 60)).padStart(2, '0')}:${String(minutes % 60).padStart(2, '0')}`;
       slots.push({ value, label: intervalLabel(value) });
     }
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const sameDay = dateInput.value === isoDate(new Date());
       if (!options.length) readyTimeNote.textContent = 'На цю дату доступного часу немає.';
       else if (!sameDay) readyTimeNote.textContent = `Перший доступний час: ${options[0].label}.`;
-      else if (fulfillment === 'pickup') readyTimeNote.textContent = `Забрати замовлення можна не раніше ніж через 1 годину. Найближчий час: ${options[0].label}.`;
+      else if (fulfillment === 'pickup') readyTimeNote.textContent = `Час приготування - 40–60 хвилин. Найближчий час: ${options[0].label}.`;
       else if (fulfillment === 'delivery') readyTimeNote.textContent = `Найближчий доступний час доставки: ${options[0].label}.`;
       else readyTimeNote.textContent = `Найближчий доступний час: ${options[0].label}.`;
     }

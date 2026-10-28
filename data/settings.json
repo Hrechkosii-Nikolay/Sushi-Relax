@@ -11,7 +11,7 @@
         "manual_enabled": true,
         "days_ahead": 7,
         "slot_minutes": 30,
-        "lead_minutes": 60
+        "lead_minutes": 40
     },
     "delivery": {
         "minimum_minor": 80000,
