@@ -63,7 +63,7 @@
         },
         {
             "id": "cocktails",
-            "name": "Коктейлі",
+            "name": "Коктейлі Б/А",
             "order": 90
         },
         {
@@ -702,7 +702,7 @@
         {
             "id": "cocktail-sex-on-the-beach",
             "category": "cocktails",
-            "name": "Б/а Секс на пляжі",
+            "name": "Секс на пляжі",
             "image": "drinks-cocktails.png",
             "price_minor": 7000,
             "weight_g": null,
@@ -716,7 +716,7 @@
         {
             "id": "cocktail-pina-colada",
             "category": "cocktails",
-            "name": "Б/а Піна колада",
+            "name": "Піна колада",
             "image": "drinks-cocktails.png",
             "price_minor": 7000,
             "weight_g": null,
@@ -730,7 +730,7 @@
         {
             "id": "cocktail-mojito",
             "category": "cocktails",
-            "name": "Б/а Мохіто",
+            "name": "Мохіто",
             "image": "drinks-cocktails.png",
             "price_minor": 7000,
             "weight_g": null,
@@ -744,7 +744,7 @@
         {
             "id": "cocktail-blue-lagoon",
             "category": "cocktails",
-            "name": "Б/а Блакитна лагуна",
+            "name": "Блакитна лагуна",
             "image": "drinks-cocktails.png",
             "price_minor": 7000,
             "weight_g": null,
@@ -758,7 +758,7 @@
         {
             "id": "cocktail-barbie",
             "category": "cocktails",
-            "name": "Б/а Барбі",
+            "name": "Барбі",
             "image": "drinks-cocktails.png",
             "price_minor": 7000,
             "weight_g": null,
@@ -772,7 +772,7 @@
         {
             "id": "cocktail-blue-orange",
             "category": "cocktails",
-            "name": "Б/а Blue Orange",
+            "name": "Blue Orange",
             "image": "drinks-cocktails.png",
             "price_minor": 7000,
             "weight_g": null,
@@ -786,7 +786,7 @@
         {
             "id": "cocktail-sicily",
             "category": "cocktails",
-            "name": "Б/а Сицилія",
+            "name": "Сицилія",
             "image": "drinks-cocktails.png",
             "price_minor": 7000,
             "weight_g": null,
