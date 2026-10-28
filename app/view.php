@@ -78,7 +78,7 @@ function page_end(bool $withCart = true, array $scripts = []): void
 </button>
 <?php endif; ?>
 <button class="to-top" type="button" aria-label="Повернутися вгору">↑</button>
-<script src="/assets/js/app.js?v=20261027-11" defer></script>
+<script src="/assets/js/app.js?v=20261028-12" defer></script>
 <?php foreach ($scripts as $script): ?><script src="<?=h($script)?>" defer></script><?php endforeach; ?>
 </body>
 </html>

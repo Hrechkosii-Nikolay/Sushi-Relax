@@ -50,14 +50,25 @@
   }));
 
   const categoryLinks = [...document.querySelectorAll('[data-category-link]')];
-  categoryLinks.forEach(link => link.addEventListener('click', () => {
+  const centerCategoryLink = link => {
+    const list = link.closest('.qr-category-nav-list');
+    const item = link.closest('li');
+    if (!list || !item) return;
+    const left = item.offsetLeft - (list.clientWidth - item.offsetWidth) / 2;
+    list.scrollTo({ left: Math.max(0, left), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  };
+  const setActiveCategory = link => {
+    if (!link || link.getAttribute('aria-current') === 'true') return;
     categoryLinks.forEach(item => item.removeAttribute('aria-current'));
     link.setAttribute('aria-current', 'true');
+    centerCategoryLink(link);
+  };
+  categoryLinks.forEach(link => link.addEventListener('click', () => {
+    setActiveCategory(link);
     const target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
     const trigger = target?.querySelector('.category-trigger');
     const panel = target?.querySelector('.category-panel');
     if (trigger && panel) { trigger.setAttribute('aria-expanded', 'true'); panel.hidden = false; }
-    link.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest', inline: 'center' });
   }));
 
   document.querySelectorAll('.qr-category-nav').forEach(nav => {
@@ -76,6 +87,28 @@
     list.addEventListener('scroll', updateScrollButtons, { passive: true });
     addEventListener('resize', updateScrollButtons);
     requestAnimationFrame(updateScrollButtons);
+
+    const sections = [...nav.querySelectorAll('[data-category-link]')].map(link => ({
+      link,
+      section: document.getElementById(decodeURIComponent(link.hash.slice(1)))
+    })).filter(item => item.section);
+    let categoryScrollFrame = 0;
+    const syncCategoryToPage = () => {
+      categoryScrollFrame = 0;
+      if (!sections.length) return;
+      const marker = nav.getBoundingClientRect().bottom + 18;
+      let active = sections.find(item => !item.section.hidden) || sections[0];
+      sections.forEach(item => {
+        if (!item.section.hidden && item.section.getBoundingClientRect().top <= marker) active = item;
+      });
+      setActiveCategory(active.link);
+    };
+    const scheduleCategorySync = () => {
+      if (!categoryScrollFrame) categoryScrollFrame = requestAnimationFrame(syncCategoryToPage);
+    };
+    addEventListener('scroll', scheduleCategorySync, { passive: true });
+    addEventListener('resize', scheduleCategorySync);
+    requestAnimationFrame(syncCategoryToPage);
   });
 
   const revealHashProduct = () => {
