@@ -150,7 +150,6 @@ $lines[] = '🍣 СКЛАД ЗАМОВЛЕННЯ';
 foreach ($verified as $row) {
     $weightLabel=is_int($row['weight_g']??null)?' · '.$row['weight_g'].' г/шт':'';
     $lines[] = "• {$row['quantity']} × {$row['name']} · " . money($row['unit_minor']) . "/шт{$weightLabel} - " . money($row['line_minor']);
-    if(!empty($row['ingredients']))$lines[]='  📝 '.preg_replace('/\s+/u',' ',(string)$row['ingredients']);
     foreach ($row['options'] as $option) $lines[] = "  ➕ {$option['name']} - " . money($option['price_minor']);
 }
 if (is_int($totalWeight)) $lines[] = "⚖️ Загальна вага: {$totalWeight} г";
