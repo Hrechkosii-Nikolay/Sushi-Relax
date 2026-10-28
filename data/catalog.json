@@ -322,6 +322,20 @@
             "delivery_available": true
         },
         {
+            "id": "philadelphia-premium",
+            "category": "philadelphia",
+            "name": "Філадельфія Premium",
+            "image": "philadelphia-premium.webp",
+            "price_minor": 30000,
+            "weight_g": 310,
+            "prep_minutes": null,
+            "description": null,
+            "ingredients": "Креветка темпура, крем-сир, авокадо, лосось, соус світ чилі",
+            "available": true,
+            "order": 110,
+            "delivery_available": true
+        },
+        {
             "id": "california-salmon",
             "category": "california",
             "name": "Каліфорнія з лососем",
