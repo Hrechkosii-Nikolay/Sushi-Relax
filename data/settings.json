@@ -5,7 +5,7 @@
     "city": "м. Гадяч",
     "phone": "+380 66 839 86 79",
     "instagram_url": "https://www.instagram.com/sushi_relax/",
-    "telegram_contact": null,
+    "telegram_contact": "https://t.me/sushi_relax",
     "about": "Sushi Relax - суші-заклад у Гадячі. Готуємо роли та сети для самовивозу та доставки; замовлення приймаємо щодня з 10:00 до 21:00.",
     "orders": {
         "manual_enabled": true,
